@@ -10,7 +10,8 @@ export default defineConfig({
     dts({
       include: ["lib"],
       copyDtsFiles: true,
-      outDir: "dist"
+      outDir: "dist",
+      tsconfigPath: "./tsconfig-build.json"
     }),
   ],
   build: {
@@ -18,6 +19,8 @@ export default defineConfig({
     rollupOptions:{
       external: ['react', 'react/jsx-runtime']
     },
+    sourcemap: true,
+    
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
       formats: [ "es" ],
