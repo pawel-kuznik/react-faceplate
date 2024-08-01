@@ -1,6 +1,5 @@
 {
   "name": "@pawel-kuznik/react-faceplate",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "main": "dist/main.js",
