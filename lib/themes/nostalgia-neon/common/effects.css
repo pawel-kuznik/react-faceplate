@@ -2,4 +2,10 @@
 {
     --faceplate-shading-gray: linear-gradient(45deg, rgba(128, 128, 128, 0.25) 25%, rgba(128, 128, 128, 0) 25%, rgba(128, 128, 128, 0) 50%, rgba(128, 128, 128, 0.25) 50%, rgba(128, 128, 128, 0.25) 75%, rgba(128, 128, 128, 0) 75%, rgba(128, 128, 128, 0) 100%);
     --faceplate-shading-gray-hover: linear-gradient(45deg, rgba(128, 128, 128, 0.2) 25%, rgba(128, 128, 128, 0) 25%, rgba(128, 128, 128, 0) 50%, rgba(128, 128, 128, 0.2) 50%, rgba(128, 128, 128, 0.2) 75%, rgba(128, 128, 128, 0) 75%, rgba(128, 128, 128, 0) 100%);
+
+    --faceplate-shading-light: 
+        linear-gradient(45deg, rgba(128, 128, 128, 0.2) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(128, 128, 128, 0.2) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(128, 128, 128, 0.2) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(128, 128, 128, 0.2) 75%);
 }

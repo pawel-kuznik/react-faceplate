@@ -1,4 +1,11 @@
 :root
 {
     --faceplate-controls-line-height: 16px;
+    --faceplate-controls-font-color: var(--faceplate-color-black);
+    --faceplate-controls-font-bg: var(--faceplate-color-white);
+}
+
+body
+{
+    font-family: Tahoma;
 }

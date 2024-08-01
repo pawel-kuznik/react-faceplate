@@ -1,0 +1,32 @@
+.faceplate-contentbox
+{
+    position: relative;
+    padding: 4px;
+    border: 2px solid var(--faceplate-controls-font-color);
+}
+
+.faceplate-contentbox:has(.faceplate-contentbox-label)
+{
+    margin-top: 20px;
+}
+
+.faceplate-contentbox-label
+{
+    position: absolute;
+    height: 16px;
+    top: calc(-16px - 2px - 4px - 4px);
+    left: -2px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 16px;
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    background: var(--faceplate-controls-font-color);
+    color: var(--faceplate-controls-font-bg);
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 16px) 0%,
+        100% 100%,
+        0% 100%
+    );
+}

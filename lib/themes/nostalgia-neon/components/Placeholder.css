@@ -1,0 +1,131 @@
+.faceplate-placeholder
+{
+    position: relative;
+    border: 2px solid var(--faceplate-color-red);
+}
+
+.faceplate-placeholder::before,
+.faceplate-placeholder::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--faceplate-color-red);
+}
+
+.faceplate-placeholder::before
+{
+    clip-path: polygon(
+        1px 0%, 
+        100% calc(100% - 1px),
+        100% 100%,
+        calc(100% - 1px) 100%,
+        0% 1px,
+        0% 0%   
+    );
+}
+
+.faceplate-placeholder::after
+{
+    clip-path: polygon(
+        calc(100% - 1px) 0%,
+        100% 0%,
+        100% 1px,
+        1px 100%,
+        0% 100%,
+        0% calc(100% - 1px)   
+    );
+}
+
+/**
+ *  Red color
+ */
+  
+.faceplate-placeholder-color-red
+{
+    border-color: var(--faceplate-color-red);
+}
+
+.faceplate-placeholder-color-red::before,
+.faceplate-placeholder-color-red::after
+{
+    background: var(--faceplate-color-red);
+}
+
+/**
+ *  Orange color
+ */
+  
+.faceplate-placeholder-color-orange
+{
+    border-color: var(--faceplate-color-orange);
+}
+
+.faceplate-placeholder-color-orange::before,
+.faceplate-placeholder-color-orange::after
+{
+    background: var(--faceplate-color-orange);
+}
+
+/**
+ *  Blue color
+ */
+  
+.faceplate-placeholder-color-blue
+{
+    border-color: var(--faceplate-color-blue);
+}
+
+.faceplate-placeholder-color-blue::before,
+.faceplate-placeholder-color-blue::after
+{
+    background: var(--faceplate-color-blue);
+}
+
+/**
+ *  Green color
+ */
+  
+.faceplate-placeholder-color-green
+{
+    border-color: var(--faceplate-color-green);
+}
+
+.faceplate-placeholder-color-green::before,
+.faceplate-placeholder-color-green::after
+{
+    background: var(--faceplate-color-green);
+}
+
+/**
+ *  Gray color
+ */
+  
+.faceplate-placeholder-color-gray
+{
+    border-color: var(--faceplate-color-gray);
+}
+
+.faceplate-placeholder-color-gray::before,
+.faceplate-placeholder-color-gray::after
+{
+    background: var(--faceplate-color-gray);
+}
+
+/**
+ *  Black color
+ */
+  
+.faceplate-placeholder-color-black
+{
+    border-color: var(--faceplate-color-black);
+}
+
+.faceplate-placeholder-color-black::before,
+.faceplate-placeholder-color-black::after
+{
+    background: var(--faceplate-color-black);
+}
