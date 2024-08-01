@@ -26,3 +26,4 @@ dist-ssr
 # Build code in lib
 lib/**/*.js
 lib/**/*.jsx
+*storybook.log

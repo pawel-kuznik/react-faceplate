@@ -1,0 +1,94 @@
+.faceplate-button
+{
+    padding: 0;
+    margin: 0;
+
+    font-weight: bold;
+    letter-spacing: .25px;
+
+    background: var(--faceplate-shading-gray);
+    background-size: 4px 4px;
+    border: none;
+    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
+    line-height: var(--faceplate-controls-line-height);
+    padding-right: calc(2* var(--faceplate-control-spacing));
+    padding-top: var(--faceplate-control-spacing);
+    padding-bottom: var(--faceplate-control-spacing);
+
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+
+    transition: background .4s;
+}
+
+.faceplate-button::before
+{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
+    margin-right: var(--faceplate-control-spacing);
+    margin-top: calc(-1* var(--faceplate-control-spacing));
+}
+
+.faceplate-button:hover
+{
+    background: var(--faceplate-shading-gray-hover);
+    background-size: 4px 4px;
+}
+
+/**
+ *  The "default" style
+ */
+
+.faceplate-button.faceplate-button-style-default
+{
+    color: var(--faceplate-color-black);
+}
+
+.faceplate-button.faceplate-button-style-default::before
+{
+    background-color: var(--faceplate-color-black);
+}
+
+/**
+ *  The "red" style
+ */
+
+.faceplate-button.faceplate-button-style-red
+{
+    color: var(--faceplate-color-red);
+}
+
+.faceplate-button.faceplate-button-style-red::before
+{
+    background-color: var(--faceplate-color-red);
+}
+
+/**
+ *  The "orange" style
+ */
+
+.faceplate-button.faceplate-button-style-orange
+{
+    color: var(--faceplate-color-orange);
+}
+
+.faceplate-button.faceplate-button-style-orange::before
+{
+    background-color: var(--faceplate-color-orange);
+}
+
+/**
+ *  The "yellow" style
+ */
+
+.faceplate-button.faceplate-button-style-yellow
+{
+    color: var(--faceplate-color-yellow);
+}
+
+.faceplate-button.faceplate-button-style-yellow::before
+{
+    background-color: var(--faceplate-color-yellow);
+}

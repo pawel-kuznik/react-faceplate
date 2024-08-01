@@ -1,4 +1,5 @@
 import { FormEvent, ReactNode } from "react";
+import { extractFormData } from "../../utils/extractFormData";
 
 export interface BasicFormProps {
 
@@ -26,33 +27,18 @@ export interface BasicFormProps {
  */
 export function BasicForm({ children, onSubmit, onChange }: BasicFormProps) {
 
-    const extractData = (event: FormEvent) : object => {
+    const processFormEvent = (event: FormEvent) : object => {
 
         const form = (event.target as HTMLElement).closest("form") as HTMLFormElement;
 
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        const selects = form.querySelectorAll("select");
-
-        for (let select of selects) {
-
-            if (select.getAttribute('disabled')) continue;
-
-            const name = String(select.getAttribute('name'));
-            if (!name) continue;
-
-            data[name] = select.value;
-        }        
-
-        return data;
+        return extractFormData(form);
     };
 
     const handleChange = (event: FormEvent) => {
 
         if (!onChange) return;
 
-        onChange(extractData(event));
+        onChange(processFormEvent(event));
     };
 
     const handleSubmit = (event: FormEvent) => {
@@ -61,7 +47,7 @@ export function BasicForm({ children, onSubmit, onChange }: BasicFormProps) {
 
         event.preventDefault();
 
-        onSubmit(extractData(event));
+        onSubmit(processFormEvent(event));
     };
 
     return (
