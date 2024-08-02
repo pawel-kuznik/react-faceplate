@@ -21,7 +21,7 @@
     transition: background .4s;
 }
 
-.faceplate-button::before
+.faceplate-button.faceplate-button-size-normal::before
 {
     content: "";
     display: inline-block;

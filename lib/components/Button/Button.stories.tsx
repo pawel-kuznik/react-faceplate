@@ -35,3 +35,17 @@ export const Yellow: Story = {
     style: "yellow"
   }
 };
+
+export const MiniDefault = {
+  args: {
+    style: "default",
+    size: "mini"
+  }
+};
+
+export const MiniRed = {
+  args: {
+    style: "red",
+    size: "mini"
+  }
+};
