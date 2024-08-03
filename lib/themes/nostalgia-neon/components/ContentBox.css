@@ -30,3 +30,16 @@
         0% 100%
     );
 }
+
+.faceplate-contentbox:has(.faceplate-contentbox-sidetoolbar)
+{
+    margin-right: 8px;
+    padding-right: 8px;
+}
+
+.faceplate-contentbox-sidetoolbar
+{
+    position: absolute;
+    top: 16px;
+    right: -15px;
+}

@@ -1,4 +1,4 @@
-.faceplate-button
+.faceplate-button.faceplate-button-size-normal
 {
     padding: 0;
     margin: 0;
@@ -31,10 +31,23 @@
     margin-top: calc(-1* var(--faceplate-control-spacing));
 }
 
-.faceplate-button:hover
+.faceplate-button.faceplate-button-size-normal:hover
 {
     background: var(--faceplate-shading-gray-hover);
     background-size: 4px 4px;
+}
+
+.faceplate-button.faceplate-button-size-mini
+{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    padding: 2px;
+
+    border: 1px solid var(--faceplate-controls-font-color);
+
+    background: var(--faceplate-controls-font-color);
+    background-clip: content-box;
 }
 
 /**
@@ -46,7 +59,7 @@
     color: var(--faceplate-color-black);
 }
 
-.faceplate-button.faceplate-button-style-default::before
+.faceplate-button.faceplate-button-size-normal.faceplate-button-style-default::before
 {
     background-color: var(--faceplate-color-black);
 }
@@ -60,7 +73,7 @@
     color: var(--faceplate-color-red);
 }
 
-.faceplate-button.faceplate-button-style-red::before
+.faceplate-button.faceplate-button-size-normal.faceplate-button-style-red::before
 {
     background-color: var(--faceplate-color-red);
 }
@@ -74,7 +87,7 @@
     color: var(--faceplate-color-orange);
 }
 
-.faceplate-button.faceplate-button-style-orange::before
+.faceplate-button.faceplate-button-size-normal.faceplate-button-style-orange::before
 {
     background-color: var(--faceplate-color-orange);
 }
@@ -88,7 +101,7 @@
     color: var(--faceplate-color-yellow);
 }
 
-.faceplate-button.faceplate-button-style-yellow::before
+.faceplate-button.faceplate-button-size-normal.faceplate-button-style-yellow::before
 {
     background-color: var(--faceplate-color-yellow);
 }

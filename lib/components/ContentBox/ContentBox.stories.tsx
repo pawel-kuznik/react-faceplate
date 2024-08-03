@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { FormField } from '../FormField';
 import { ContentBox } from './ContentBox';
+import { Button } from '../Button';
 
 export default {
     title: 'components/ContentBox',
@@ -29,6 +30,28 @@ export const WithLabel: Story = {
         label: "ContentBox label",
         children: (
             <>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+                </p>
+            </>
+        )
+    }
+};
+
+export const WithSidebar: Story = {
+    args: {
+        sideToolbar:(
+            <>
+                <Button size="mini"/>
+                <Button size="mini"/>
+                <Button size="mini"/>
+            </>
+        ),
+        children: (
+            <>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+                </p>
                 <p>
                     Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
                 </p>

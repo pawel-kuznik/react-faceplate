@@ -3,7 +3,7 @@ export interface ButtonProps {
     /**
      *  The label to display inside the button.
      */
-    label: string;
+    label?: string;
 
     /**
      *  The style of the button.

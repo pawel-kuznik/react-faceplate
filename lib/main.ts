@@ -8,5 +8,6 @@ export * from "./components/Input";
 export * from "./components/Placeholder";
 export * from "./components/ScreenBox";
 export * from "./components/SelectInput";
+export * from "./components/SideToolbox";
 
 export * from "./utils/extractFormData";
