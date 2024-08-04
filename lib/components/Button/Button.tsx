@@ -1,3 +1,5 @@
+import { PaletteColor } from "../CssTypes";
+
 export interface ButtonProps {
 
     /**
@@ -8,7 +10,7 @@ export interface ButtonProps {
     /**
      *  The style of the button.
      */
-    style?: "default" | "red" | "orange" | "yellow";
+    style?: "default" | PaletteColor;
 
     /**
      *  The size of the button.

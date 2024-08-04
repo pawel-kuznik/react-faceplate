@@ -20,7 +20,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "clear-build-artifacts": ""
+    "clear-build-artifacts": "find lib -name '*.js' -or -name '*.jsx' -type f -delete"
   },
   "overrides-old": {
     "minimatch": "5.1.2",

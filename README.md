@@ -13,6 +13,12 @@ personal UI and styling needs. Because of that, some of solutions inside could s
 
 The library comes with some themes built in.
 
+## Oddities around storybook
+
+Working with storybook in this repository is a little bit quirky. It can seem that storybook
+isn't picking up changes when working on components. This is most likely cause there is a build
+artifact and storybook prioritizes the .jsx file. This can be done by running `npm run clear-build-artifacts`.
+
 ### Credits
 
 The repository was based on method shown in:

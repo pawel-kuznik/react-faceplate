@@ -6,4 +6,6 @@
     grid-auto-rows: auto;
     gap: 2px;
     width: fit-content;
+
+    background: var(--faceplate-controls-font-bg);
 }

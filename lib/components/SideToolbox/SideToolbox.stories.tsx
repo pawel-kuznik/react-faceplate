@@ -13,7 +13,7 @@ export const Default: Story = {
   args: {
     children: (
         <>
-            <Button size="mini"/>
+            <Button size="mini" style="red"/>
             <Button size="mini"/>
             <Button size="mini"/>
             <Button size="mini"/>
