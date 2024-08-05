@@ -4,6 +4,7 @@ export * from "./components/BasicForm";
 export * from "./components/Button";
 export * from "./components/ContentBox";
 export * from "./components/DataTable";
+export * from "./components/DialogFrame";
 export * from "./components/FormField";
 export * from "./components/FormFieldLayout";
 export * from "./components/FormGroup";

@@ -1,0 +1,32 @@
+.faceplate-dialogframe
+{
+    border: 2px solid var(--faceplate-controls-font-color);
+    box-shadow: var(--faceplate-box-shadow);   
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+}
+
+.faceplate-dialogframe-title
+{
+    background: var(--faceplate-controls-font-color);
+    color: var(--faceplate-controls-font-bg);
+    letter-spacing: 0.25px;
+    font-weight: bold;
+    text-shadow: var(--faceplate-text-shadow);
+
+    padding: 4px;
+}
+
+.faceplate-dialogframe-controls
+{
+    background: var(--faceplate-controls-font-color);
+    color: var(--faceplate-controls-font-bg);
+}
+
+.faceplate-dialogframe-content
+{
+    grid-column: span 2;
+    padding: 4px;
+}

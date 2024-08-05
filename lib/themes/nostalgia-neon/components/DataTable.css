@@ -63,7 +63,8 @@
 /**
  *  A table inside the content box should stick to the sides.
  */
-.faceplate-contentbox-content > .faceplate-datatable
+.faceplate-contentbox-content > .faceplate-datatable,
+.faceplate-dialogframe-content > .faceplate-datatable
 {
     width: calc(100% + 12px);
     margin-left: -6px;
@@ -74,7 +75,8 @@
  *  Stick the datatable to the bottom of the content box if it's
  *  the last child.
  */
-.faceplate-contentbox-content > .faceplate-datatable:last-child
+.faceplate-contentbox-content > .faceplate-datatable:last-child,
+.faceplate-dialogframe-content > .faceplate-datatable:last-child
 {
     margin-bottom: -4px;
 }
@@ -83,7 +85,8 @@
  *  When the table is the last child inside a content box it doesn't need
  *  to have the bottom border.
  */
-.faceplate-contentbox-content > .faceplate-datatable:last-child tr:last-child td
+.faceplate-contentbox-content > .faceplate-datatable:last-child tr:last-child td,
+.faceplate-dialogframe-content > .faceplate-datatable:last-child tr:last-child td
 {
     border-bottom: none;
 }
