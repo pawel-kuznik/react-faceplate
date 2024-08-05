@@ -33,3 +33,57 @@ export const DefaultNormal: Story = {
     )
   }
 };
+
+export const FixedSize: Story = {
+  args: {
+    width: 400,
+    title: "Dialog title",
+    children: (
+      <>
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+        </p>
+        <DataTable
+          columns={[
+            { label: "Column 1" },
+            { label: "Column 2" },
+            { label: "Column 3" },
+          ]}
+          data={[
+            ["Cell 1", 1, 2],
+            ["Cell 2", 1, 2],
+            ["Cell 3", 1, 2],
+          ]}
+        />
+      </>
+    )
+  }
+};
+
+export const MovedSize: Story = {
+  args: {
+    width: 400,
+    leftOffset: 200,
+    topOffset: 100,
+    title: "Dialog title",
+    children: (
+      <>
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+        </p>
+        <DataTable
+          columns={[
+            { label: "Column 1" },
+            { label: "Column 2" },
+            { label: "Column 3" },
+          ]}
+          data={[
+            ["Cell 1", 1, 2],
+            ["Cell 2", 1, 2],
+            ["Cell 3", 1, 2],
+          ]}
+        />
+      </>
+    )
+  }
+};

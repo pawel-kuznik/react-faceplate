@@ -7,6 +7,9 @@
     padding: 4px;
     border: 2px solid var(--faceplate-controls-font-color);
     box-shadow: var(--faceplate-box-shadow);
+
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /**
@@ -14,7 +17,7 @@
  */
 .faceplate-contentbox:has(.faceplate-contentbox-label)
 {
-    margin-top: 20px;
+    margin-top: 36px;
 }
 
 /**

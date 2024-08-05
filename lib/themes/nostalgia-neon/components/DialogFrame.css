@@ -1,7 +1,12 @@
 .faceplate-dialogframe
 {
+    position: absolute;
+
     border: 2px solid var(--faceplate-controls-font-color);
-    box-shadow: var(--faceplate-box-shadow);   
+    box-shadow: var(--faceplate-box-shadow);
+    
+    color: var(--faceplate-controls-font-color);
+    background: var(--faceplate-controls-font-bg);
 
     display: grid;
     grid-template-columns: 1fr auto;
