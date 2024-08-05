@@ -1,15 +1,25 @@
+/**
+ *  Make sure that content box has a border around.
+ */
 .faceplate-contentbox
 {
     position: relative;
     padding: 4px;
     border: 2px solid var(--faceplate-controls-font-color);
+    box-shadow: var(--faceplate-box-shadow);
 }
 
+/**
+ *  If the content box has a label, it needs a little bit of space of the top.
+ */
 .faceplate-contentbox:has(.faceplate-contentbox-label)
 {
     margin-top: 20px;
 }
 
+/**
+ *  The label element that is in a form of cut out.
+ */
 .faceplate-contentbox-label
 {
     position: absolute;
@@ -29,14 +39,22 @@
         100% 100%,
         0% 100%
     );
+    box-shadow: var(--faceplate-box-shadow);
 }
 
+/**
+ *  When the content box has a side toolbar, some space needs to be reserverd
+ *  on the right. 
+ */
 .faceplate-contentbox:has(.faceplate-contentbox-sidetoolbar)
 {
     margin-right: 8px;
     padding-right: 8px;
 }
 
+/**
+ *  Place the side toolbar.
+ */
 .faceplate-contentbox-sidetoolbar
 {
     position: absolute;

@@ -9,3 +9,12 @@ body
 {
     font-family: Tahoma;
 }
+
+/**
+ *  Some elements have a text shadow applied. This is for when we put them inside the ScreenBox
+ *  or similar element that needs to apply "filters" on these elements.
+ */
+p, span, label, strong, td
+{
+    text-shadow: var(--faceplate-text-shadow);
+}

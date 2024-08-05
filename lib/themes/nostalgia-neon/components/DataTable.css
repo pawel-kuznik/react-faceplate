@@ -29,6 +29,12 @@
     color: var(--faceplate-controls-font-bg);
     letter-spacing: 0.25px;
     font-weight: bold;
+    text-shadow: var(--faceplate-text-shadow);
+}
+
+.faceplate-datatable tr:has(th)
+{
+    box-shadow: var(--faceplate-box-shadow);
 }
 
 /**

@@ -8,10 +8,15 @@ export interface HeaderProps {
     columns: ColumnProps[];
 };
 
+/**
+ *  The header part of the DataTable.
+ */
 export function Header({ columns }: HeaderProps) {
     return (
         <thead>
-            {columns.map((c, i) => (<Column key={i} {...c}/>))}
+            <tr>
+                {columns.map((c, i) => (<Column key={i} {...c}/>))}
+            </tr>
         </thead>
     );
 };
