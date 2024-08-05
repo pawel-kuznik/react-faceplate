@@ -5,6 +5,7 @@
 
 @import "./components/Button.css";
 @import "./components/ContentBox.css";
+@import "./components/DataTable.css";
 @import "./components/FormFieldLayout.css";
 @import "./components/FormGroup.css";
 @import "./components/Input.css";

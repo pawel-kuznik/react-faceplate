@@ -1,0 +1,83 @@
+/**
+ *  Reset the table styles.
+ */
+.faceplate-datatable
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/**
+ *  Add horizontal borders.
+ */
+.faceplate-datatable td,
+.faceplate-datatable th
+{
+    text-align: left;
+    border-bottom: 1px solid var(--faceplate-controls-font-color);
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/**
+ *  Make the header solid.
+ */
+.faceplate-datatable th
+{
+    background: var(--faceplate-controls-font-color);
+    color: var(--faceplate-controls-font-bg);
+    letter-spacing: 0.25px;
+    font-weight: bold;
+}
+
+/**
+ *  Make sure we can anchor the peg defined below.
+ */
+.faceplate-datatable td
+{
+    position: relative;
+}
+
+/**
+ *  Add a small peg instead of vertical border. This gives more of a old
+ *  document feel.
+ */
+.faceplate-datatable td:not(:last-child)::after {
+    content: '';
+    background: var(--faceplate-controls-font-color);
+    height: 8px;
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/**
+ *  A table inside the content box should stick to the sides.
+ */
+.faceplate-contentbox-content > .faceplate-datatable
+{
+    width: calc(100% + 12px);
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+/**
+ *  Stick the datatable to the bottom of the content box if it's
+ *  the last child.
+ */
+.faceplate-contentbox-content > .faceplate-datatable:last-child
+{
+    margin-bottom: -4px;
+}
+
+/**
+ *  When the table is the last child inside a content box it doesn't need
+ *  to have the bottom border.
+ */
+.faceplate-contentbox-content > .faceplate-datatable:last-child tr:last-child td
+{
+    border-bottom: none;
+}

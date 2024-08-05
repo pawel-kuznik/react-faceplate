@@ -21,7 +21,7 @@ export interface ContentBoxProps {
     /**
      *  The content of the box.
      */
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**
@@ -39,7 +39,7 @@ export function ContentBox({ label, faded, sideToolbar, children }: ContentBoxPr
         <div className={css.join(" ")}>
             {label && <div className="faceplate-contentbox-label">{label}</div>}
             {sideToolbar && <div className="faceplate-contentbox-sidetoolbar"><SideToolbox>{sideToolbar}</SideToolbox></div>}
-            {children}
+            {children && <div className="faceplate-contentbox-content">{children}</div>}
         </div>
     );
 };
