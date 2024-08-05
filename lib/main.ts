@@ -9,6 +9,7 @@ export * from "./components/FormField";
 export * from "./components/FormFieldLayout";
 export * from "./components/FormGroup";
 export * from "./components/Input";
+export * from "./components/Modal";
 export * from "./components/Placeholder";
 export * from "./components/ScreenBox";
 export * from "./components/SelectInput";
