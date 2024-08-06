@@ -2,6 +2,7 @@
 {
     position: relative;
     border: 2px solid var(--faceplate-color-red);
+    box-sizing: border-box;
 }
 
 .faceplate-placeholder::before,

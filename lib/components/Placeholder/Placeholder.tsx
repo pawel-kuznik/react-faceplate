@@ -1,7 +1,7 @@
 
 export interface PlaceholderProps {
-    width?: string;
-    height?: string;
+    width?: number | string;
+    height?: number | string;
     color?: "red" | "orange" | "blue" | "green" | "gray" | "black";
 }
 

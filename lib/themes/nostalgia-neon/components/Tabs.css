@@ -1,0 +1,29 @@
+.faceplate-tabs-layout-horizontal
+{
+    display: grid;
+    grid-auto-flow: column;
+
+    gap: 4px;
+}
+
+.faceplate-tabs-layout-vertical
+{
+    display: grid;
+    grid-auto-flow: row; 
+    grid-template-columns: max-content;
+    
+    gap: 4px;
+}
+
+.faceplate-tabs-tab
+{
+    background: var(--faceplate-controls-font-bg);
+    color: var(--faceplate-controls-font-color);
+    border: 1px solid var(--faceplate-controls-font-color);
+    padding: 4px;
+}
+
+.faceplate-tabs-tab.faceplate-tabs-tab-selected
+{
+    font-weight: bold;
+}
