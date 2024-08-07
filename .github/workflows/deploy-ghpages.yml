@@ -3,8 +3,8 @@ name: Publish static Storybook on GitHub Pages
 on:
   # Event for the workflow to run on
   push:
-    branches:
-      - 'main'
+    tags :
+      - '*'
  
 permissions:
   contents: read
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '18.x'
  
-      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
+      # Deploy the storybook with GH Pages
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
           install_command: yarn install # default: npm ci
