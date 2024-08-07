@@ -15,5 +15,6 @@ export * from "./components/ScreenBox";
 export * from "./components/SelectInput";
 export * from "./components/SideToolbox";
 export * from "./components/Tabs";
+export * from "./components/TabsFrame";
 
 export * from "./utils/extractFormData";

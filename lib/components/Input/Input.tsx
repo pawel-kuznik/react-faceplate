@@ -43,6 +43,12 @@ export interface InputProps {
     onChange?: (value: string) => void;
 };
 
+/**
+ *  This is a simplified input component. It works like a regular input element,
+ *  but exposes less of the API of the regular input. This is done so that the API
+ *  can be simplified. For example, the onChange() provides changed value instead 
+ *  of instance of change event. In most cases this is perfectly fine.
+ */
 export function Input({ name, list, type, min, max, defaultValue, valueRef, onChange } : InputProps) {
 
     const handleChange = (event: ChangeEvent) => {

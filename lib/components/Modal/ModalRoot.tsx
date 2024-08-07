@@ -3,6 +3,9 @@ import { ModalRootContext, ModalRootControlsContext, ModalStackList } from "./Mo
 
 export interface ModalRootProps {
 
+    /**
+     *  The children of the ModalRoot.
+     */
     children?: ReactNode;
 };
 

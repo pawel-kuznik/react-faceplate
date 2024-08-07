@@ -40,6 +40,11 @@ export interface SelectInputProps {
     onChange?: (value: string) => void;
 };
 
+/**
+ *  This component is basically the same as the select element. Similarly to
+ *  Input component, this component exists to simplify select element handling
+ *  and integrate it with the rest of the library. 
+ */
 export function SelectInput({ name, options, labels, titles, onChange, defaultValue, valueRef }: SelectInputProps) {
 
     const inputRef = useRef<HTMLSelectElement|null>(null);

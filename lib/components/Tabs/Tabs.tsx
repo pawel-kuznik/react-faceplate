@@ -20,12 +20,19 @@ export interface TabsProps {
      *  Should the tabs be in horizontal or vertical layout?
      */
     layout?: "horizontal" | "vertical";
+
+    /**
+     *  A callback to call when the user wants to change a tab.
+     */
+    onTabChange?: (index: number) => void;
 };
 
 /**
- *  A component that shows tabs.
+ *  A component that shows tabs. The component is responsible for visual
+ *  of the tabs controls, but not for the actual tabs behaviour. This
+ *  is tackled in the TabsFrame component.
  */
-export function Tabs({ tabs, layout = "horizontal" }: TabsProps) {
+export function Tabs({ tabs, onTabChange, layout = "horizontal" }: TabsProps) {
 
     const css = [ 
         "faceplate-tabs",
@@ -36,6 +43,8 @@ export function Tabs({ tabs, layout = "horizontal" }: TabsProps) {
 
     const handleSelected = (index: number) => {
         setSelected(index);
+
+        if (selected !== index) onTabChange?.(index);
     };  
 
     return (
