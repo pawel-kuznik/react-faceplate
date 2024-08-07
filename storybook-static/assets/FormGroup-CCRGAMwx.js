@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-DEdD30eg.js";function r({children:e}){return o.jsx("fieldset",{className:"faceplate-formgroup",children:e})}r.__docgenInfo={description:"",methods:[],displayName:"FormGroup",props:{children:{required:!1,tsType:{name:"ReactNode"},description:""}}};export{r as F};
