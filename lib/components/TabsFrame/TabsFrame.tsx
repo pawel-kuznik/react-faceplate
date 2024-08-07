@@ -6,6 +6,14 @@ import { Tab, TabProps } from "./Tab";
 
 export interface TabsFrameProps {
 
+    /**
+     *  The layout of the tabs. The name of the layout refers to
+     *  layout of the tabs items, not the relation between tabs
+     *  and content.
+     * 
+     *  horizontal -    The tabs are on the top of the content.
+     *  vertical -      The tabs are on the left of the content.
+     */
     layout?: "horizontal" | "vertical";
 
     /**
@@ -16,6 +24,17 @@ export interface TabsFrameProps {
     children: ReactNode;
 };
 
+/**
+ *  TabsFrame component is an easy way to use tabs with switching content.
+ *  The component has to be defined in a very specific way: each child of this
+ *  component should be a TabsFrame.Tab component with configuration about
+ *  the tab and content.
+ * 
+ *  The tab configuration are the attributes of the TabsFrame.Tab component 
+ *  and the content of the tab is the children. The children will not be rendered
+ *  (or even present in the DOM) when the tab is not active. This means that
+ *  any logic associated with them will not run.
+ */
 function TabsFrame({ layout = "horizontal", children }: TabsFrameProps) {
 
     const [ selected, setSelected ] = useState<number>(0);
