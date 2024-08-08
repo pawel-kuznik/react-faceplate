@@ -21,7 +21,7 @@ export interface TabsFrameProps {
      *  either a list of TabsFrame.Tab or a fragment that contains
      *  TabFrameTabs.
      */
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**

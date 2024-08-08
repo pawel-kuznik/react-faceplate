@@ -27,7 +27,7 @@ export interface FormFieldProps {
     /**
      *  The name of the input.
      */
-    name: string;
+    name?: string;
 
     /**
      *  The HTML id of a list of suggestions for text/number fields.

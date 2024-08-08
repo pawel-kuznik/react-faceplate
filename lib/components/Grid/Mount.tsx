@@ -5,7 +5,7 @@ export interface MountProps {
     /**
      *  The children of the component.
      */
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**

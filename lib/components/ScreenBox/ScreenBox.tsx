@@ -5,7 +5,7 @@ export interface ScreenBoxProps {
     /**
      *  The children of the SceenBox.
      */
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**

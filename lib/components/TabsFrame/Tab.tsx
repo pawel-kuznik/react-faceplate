@@ -4,7 +4,7 @@ export interface TabProps {
 
     label: string;
 
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**
