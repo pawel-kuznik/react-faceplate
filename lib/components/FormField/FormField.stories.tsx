@@ -35,3 +35,11 @@ export const SelectInput: Story = {
         ]
     }
 };
+
+export const TextAreaInput: Story = {
+    args: {
+        label: "Text area field",
+        type: "textarea",
+        rows: 10
+    }
+};

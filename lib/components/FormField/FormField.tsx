@@ -2,6 +2,7 @@ import { MutableRefObject, ReactNode } from "react";
 import { SelectInput } from "../SelectInput";
 import { FormFieldLayout } from "../FormFieldLayout";
 import { Input } from "../Input";
+import { TextArea } from "../TextArea";
 
 export interface FormFieldProps {
 
@@ -37,7 +38,7 @@ export interface FormFieldProps {
     /**
      *  Type of the input.
      */
-    type?: "number" | "text" | "select";
+    type?: "number" | "text" | "select" | "textarea";
 
     /**
      *  The options of the input. This is only applicable for "select" inputs.
@@ -69,6 +70,11 @@ export interface FormFieldProps {
     max?: number | string;
 
     /**
+     *  The number of rows that would be applied on the "textarea" inputs.
+     */
+    rows?: number;
+
+    /**
      *  The default value of the input.
      */
     defaultValue?: string | number;
@@ -84,7 +90,7 @@ export interface FormFieldProps {
     onChange?: (value: string) => void;
 };
 
-export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, defaultValue, valueRef, onChange }: FormFieldProps) {
+export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, rows, defaultValue, valueRef, onChange }: FormFieldProps) {
 
     // the params that are safe to pass to an of the input types.
     const inputArgs: any = {
@@ -96,6 +102,7 @@ export function FormField({ layout = "column", description, label, name, type, m
         options,
         labels,
         titles,
+        rows,
         valueRef,
         onChange
     };
@@ -106,9 +113,29 @@ export function FormField({ layout = "column", description, label, name, type, m
     const css = [ 'formfield' ];
     css.push(`formfield-layout-${layout}`);
 
-    return (
+    const WrappingLayout = ({ children }: { children: ReactNode }) => (
         <FormFieldLayout label={label} layout={layout} description={description}>
-            {type === "select" ? <SelectInput {...inputArgs} /> : <Input {...inputArgs}/>}
+            {children}
         </FormFieldLayout>
+    );
+
+    console.log(type);
+
+    if (type === "textarea") return (
+        <WrappingLayout>
+            <TextArea {...inputArgs}/>
+        </WrappingLayout>
+    );
+
+    if (type === "select") return (
+        <WrappingLayout>
+            <SelectInput {...inputArgs} />
+        </WrappingLayout>
+    );
+
+    return (
+        <WrappingLayout>
+            <Input {...inputArgs}/>
+        </WrappingLayout>
     );
 };

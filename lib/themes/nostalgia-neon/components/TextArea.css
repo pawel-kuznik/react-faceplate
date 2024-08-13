@@ -1,0 +1,24 @@
+.faceplate-textarea
+{
+    width: 100%;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 1px solid var(--faceplate-color-gray);
+
+    color: var(--faceplate-controls-font-color);
+    text-shadow: var(--faceplate-text-shadow);
+
+    padding: 4px;
+
+    background-color: transparent;
+    background-image: var(--faceplate-shading-light);
+    background-size: 4px 4px;
+    background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+}
+
+.faceplate-textarea:focus
+{
+    outline: none;
+    border-color: var(--faceplate-controls-font-color);
+}
