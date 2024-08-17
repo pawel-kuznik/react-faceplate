@@ -1,0 +1,13 @@
+.faceplate-tabsframe-horizontal
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--grid-column-gap);
+}
+
+.faceplate-tabsframe-vertical
+{
+    display: grid;
+    grid-template-columns: minmax(auto, 120px) 1fr;
+    gap: var(--grid-column-gap);
+}

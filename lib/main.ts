@@ -11,6 +11,8 @@ export * from "./components/FormGroup";
 export * from "./components/Grid";
 export * from "./components/Input";
 export * from "./components/Modal";
+export * from "./components/Page";
+export * from "./components/PageHeader";
 export * from "./components/Placeholder";
 export * from "./components/ScreenBox";
 export * from "./components/SelectInput";

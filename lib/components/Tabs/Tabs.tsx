@@ -17,6 +17,11 @@ export interface TabsProps {
     tabs: TabConfig[];
 
     /**
+     *  
+     */
+    mounted?: boolean;
+
+    /**
      *  Should the tabs be in horizontal or vertical layout?
      */
     layout?: "horizontal" | "vertical";

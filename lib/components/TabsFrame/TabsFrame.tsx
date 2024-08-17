@@ -1,6 +1,4 @@
 import { Children, FC, Fragment, ReactElement, ReactNode, useState } from "react";
-import { Cell } from "../Grid/Cell";
-import { Grid } from "../Grid/Grid";
 import { Tabs } from "../Tabs";
 import { Tab, TabProps } from "./Tab";
 
@@ -45,20 +43,25 @@ function TabsFrame({ layout = "horizontal", children }: TabsFrameProps) {
         label: c.props.label
     }));
 
+    const css = [
+        'faceplate-tabsframe',
+        `faceplate-tabsframe-${layout}`
+    ];
+
     return (
-        <Grid columns={layout === "horizontal" ? 1 : 5} rows={layout === "horizontal" ? 5 : 1}>
-            <Cell mount>
+        <div className={css.join(" ")}>
+            <div className="faceplate-tabsframe-tabs">
                 <Tabs
                     layout={layout}
                     tabs={tabsConfig}
                     onTabChange={setSelected}
                 />
-            </Cell>
-            <Cell xSpan={layout === "horizontal" ? 1 : 4} ySpan={layout === "horizontal" ? 1 : 4}>
+            </div>
+            <div className="faceplate-tabsframe-content">
                 {tabs[selected].props.children}
-            </Cell>
-        </Grid>
-    )
+            </div>
+        </div>
+    );
 };
 
 function processChildren(node: ReactNode) {

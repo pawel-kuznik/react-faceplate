@@ -1,8 +1,8 @@
 .faceplate-grid
 {
     display: grid;
-    column-gap: 4px;
-    row-gap: 4px;
+    column-gap: var(--grid-column-gap);
+    row-gap: var(--grid-row-gap);
 }
 
 .faceplate-grid-cell
