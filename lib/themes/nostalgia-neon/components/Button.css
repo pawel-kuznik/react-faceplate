@@ -20,13 +20,35 @@
     transition: background .4s;
 }
 
-.faceplate-button.faceplate-button-size-normal::before {
+.faceplate-button.faceplate-button-size-normal.faceplate-button-block
+{
+    border: 1px solid var(--faceplate-button-accent);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    padding-left: var(--faceplate-control-spacing);
+    padding-right: var(--faceplate-control-spacing);
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.faceplate-button.faceplate-button-size-mini.faceplate-button-block
+{
+    display: block;
+    width: 100%;
+}
+
+.faceplate-button.faceplate-button-size-normal:not(.faceplate-button-block)::before
+{
     content: "";
     display: inline-block;
     width: 4px;
     height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
     margin-right: var(--faceplate-control-spacing);
     margin-top: calc(-1* var(--faceplate-control-spacing));
+
+    background: var(--faceplate-button-accent);
+    color: var(--faceplate-button-accent);
 }
 
 .faceplate-button.faceplate-button-size-normal:hover {
@@ -42,7 +64,7 @@
 
     border: 1px solid var(--faceplate-controls-font-color);
 
-    background: var(--faceplate-controls-font-color);
+    background: var(--faceplate-button-accent);
     background-clip: content-box;
 }
 
@@ -51,132 +73,19 @@
  */
 
 .faceplate-button.faceplate-button-style-default {
-    color: var(--faceplate-color-black);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-default::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-default {
-    background-color: var(--faceplate-color-black);
+    --faceplate-button-accent: var(--faceplate-color-black);
 }
 
 /**
- *  The "red" style
+ *  The colors
  */
-
-.faceplate-button.faceplate-button-style-red {
-    color: var(--faceplate-color-red);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-red::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-red {
-    background-color: var(--faceplate-color-red);
-}
-
-/**
- *  The "orange" style
- */
-
-.faceplate-button.faceplate-button-style-orange {
-    color: var(--faceplate-color-orange);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-orange::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-orange {
-    background-color: var(--faceplate-color-orange);
-}
-
-/**
- *  The "white" style
- */
-.faceplate-button.faceplate-button-style-white {
-    color: var(--faceplate-color-white);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-white::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-white {
-    background-color: var(--faceplate-color-white);
-}
-
-/**
- *  The "yellow" style
- */
-.faceplate-button.faceplate-button-style-yellow {
-    color: var(--faceplate-color-yellow);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-yellow::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-yellow {
-    background-color: var(--faceplate-color-yellow);
-}
-
-/**
- *  The "lime" style
- */
-.faceplate-button.faceplate-button-style-lime {
-    color: var(--faceplate-color-lime);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-lime::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-lime {
-    background-color: var(--faceplate-color-lime);
-}
-
-/**
- *  The "green" style
- */
-.faceplate-button.faceplate-button-style-green {
-    color: var(--faceplate-color-green);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-green::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-green {
-    background-color: var(--faceplate-color-green);
-}
-
-/**
- *  The "blue" style
- */
-.faceplate-button.faceplate-button-style-blue {
-    color: var(--faceplate-color-blue);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-blue::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-blue {
-    background-color: var(--faceplate-color-blue);
-}
-
-/**
- *  The "navy" style
- */
-.faceplate-button.faceplate-button-style-navy {
-    color: var(--faceplate-color-navy);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-navy::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-navy {
-    background-color: var(--faceplate-color-navy);
-}
-
-/**
- *  The "black" style
- */
-.faceplate-button.faceplate-button-style-black {
-    color: var(--faceplate-color-black);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-black::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-black {
-    background-color: var(--faceplate-color-black);
-}
-
-/**
- *  The "gray" style
- */
-.faceplate-button.faceplate-button-style-gray {
-    color: var(--faceplate-color-gray);
-}
-
-.faceplate-button.faceplate-button-size-normal.faceplate-button-style-gray::before,
-.faceplate-button.faceplate-button-size-mini.faceplate-button-style-gray {
-    background-color: var(--faceplate-color-gray);
-}
+.faceplate-button.faceplate-button-style-red { --faceplate-button-accent: var(--faceplate-color-red); }
+.faceplate-button.faceplate-button-style-orange { --faceplate-button-accent: var(--faceplate-color-orange); }
+.faceplate-button.faceplate-button-style-white { --faceplate-button-accent: var(--faceplate-color-white); }
+.faceplate-button.faceplate-button-style-yellow { --faceplate-button-accent: var(--faceplate-color-yellow); }
+.faceplate-button.faceplate-button-style-lime { --faceplate-button-accent: var(--faceplate-color-lime); }
+.faceplate-button.faceplate-button-style-green { --faceplate-button-accent: var(--faceplate-color-green); }
+.faceplate-button.faceplate-button-style-blue { --faceplate-button-accent: var(--faceplate-color-blue); }
+.faceplate-button.faceplate-button-style-navy { --faceplate-button-accent: var(--faceplate-color-navy); }
+.faceplate-button.faceplate-button-style-black { --faceplate-button-accent: var(--faceplate-color-black); }
+.faceplate-button.faceplate-button-style-gray { --faceplate-button-accent: var(--faceplate-color-gray); }

@@ -64,3 +64,31 @@
     top: 16px;
     right: -15px;
 }
+
+/**
+ *  Place the top toolbar.
+ */
+ .faceplate-contentbox-toptoolbar
+ {
+     position: absolute;
+     top: -12px;
+     right: 8px;
+ }
+
+.faceplate-contentbox:has(> .faceplate-contentbox-content > .faceplate-contentbox)
+{
+    padding: 0;
+}
+
+.faceplate-contentbox-content > .faceplate-contentbox
+{
+    border-left: 0;
+    border-right: 0;
+}
+
+.faceplate-contentbox-content > .faceplate-contentbox
+{
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}

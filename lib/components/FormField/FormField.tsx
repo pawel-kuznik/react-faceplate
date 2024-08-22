@@ -119,8 +119,6 @@ export function FormField({ layout = "column", description, label, name, type, m
         </FormFieldLayout>
     );
 
-    console.log(type);
-
     if (type === "textarea") return (
         <WrappingLayout>
             <TextArea {...inputArgs}/>

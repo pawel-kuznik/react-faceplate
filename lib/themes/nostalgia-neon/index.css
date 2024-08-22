@@ -4,6 +4,7 @@
 @import "./common/typography.css";
 
 @import "./components/Button.css";
+@import "./components/ButtonLine.css";
 @import "./components/ContentBox.css";
 @import "./components/DataTable.css";
 @import "./components/DialogFrame.css";

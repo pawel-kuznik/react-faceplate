@@ -84,3 +84,32 @@ export const WithDataTable: Story = {
         )
     }
 };
+
+export const Nested: Story = {
+    args: {
+        children: (
+            <>
+                Just regular test
+                <ContentBox label="Sub content box">
+                    Sub content box content.
+                </ContentBox>
+                <ContentBox label="Last sub content box">
+                    Last sub content box content.
+                </ContentBox>
+            </>
+        )
+    }
+};
+
+export const WithTopSidebar: Story = {
+    args: {
+        topToolbar: (
+            <>
+                <Button size="mini" style="blue" />
+                <Button size="mini" style="green" />
+                <Button size="mini" style="red" />
+            </>
+        ),
+        children: ( <div>Content</div> )
+    }
+};

@@ -85,6 +85,94 @@ export const GrayNormal: Story = {
   }
 };
 
+export const DefaultBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "default",
+    block: true
+  }
+};
+
+export const RedBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "red",
+    block: true
+  }
+};
+
+export const OrangeBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "orange",
+    block: true
+  }
+};
+
+export const WhiteBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "white",
+    block: true
+  }
+};
+
+export const YellowBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "yellow",
+    block: true
+  }
+};
+
+export const LimeBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "lime",
+    block: true
+  }
+};
+
+export const GreenBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "green",
+    block: true
+  }
+};
+
+export const BlueBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "blue",
+    block: true
+  }
+};
+
+export const NavyBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "navy",
+    block: true
+  }
+};
+
+export const BlackBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "black",
+    block: true
+  }
+};
+
+export const GrayBlock: Story = {
+  args: {
+    label: "Button label",
+    style: "gray",
+    block: true
+  }
+};
+
 export const DefaultMini = {
   args: {
     style: "default",

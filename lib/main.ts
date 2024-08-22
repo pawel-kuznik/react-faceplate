@@ -2,6 +2,7 @@ export * from "./components/CssTypes/PaletteColor";
 
 export * from "./components/BasicForm";
 export * from "./components/Button";
+export * from "./components/ButtonLine";
 export * from "./components/ContentBox";
 export * from "./components/DataTable";
 export * from "./components/DialogFrame";
