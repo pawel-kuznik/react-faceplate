@@ -5,6 +5,8 @@
     font-weight: bold;
     letter-spacing: .25px;
 
+    color: inherit;
+
     background: var(--faceplate-shading-gray);
     background-size: 4px 4px;
     border: none;
