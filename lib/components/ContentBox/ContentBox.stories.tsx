@@ -3,6 +3,7 @@ import { FormField } from '../FormField';
 import { ContentBox } from './ContentBox';
 import { Button } from '../Button';
 import { DataTable } from '../DataTable';
+import { ImageBox } from '../ImageBox';
 
 export default {
     title: 'components/ContentBox',
@@ -93,6 +94,7 @@ export const Nested: Story = {
                 <ContentBox label="Sub content box">
                     Sub content box content.
                 </ContentBox>
+                <ImageBox src="https://cataas.com/cat?height=100" height={"100px"}/>
                 <ContentBox label="Last sub content box">
                     Last sub content box content.
                 </ContentBox>

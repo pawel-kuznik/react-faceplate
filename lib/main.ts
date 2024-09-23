@@ -10,6 +10,7 @@ export * from "./components/FormField";
 export * from "./components/FormFieldLayout";
 export * from "./components/FormGroup";
 export * from "./components/Grid";
+export * from "./components/ImageBox";
 export * from "./components/Input";
 export * from "./components/Modal";
 export * from "./components/Page";

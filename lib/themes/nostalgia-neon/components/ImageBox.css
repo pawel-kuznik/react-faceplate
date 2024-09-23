@@ -1,0 +1,85 @@
+.faceplate-imagebox
+{
+    --faceplate-imagebox-color: var(--faceplate-color-white);
+    --faceplate-imagebox-background: var(--faceplate-color-gray); 
+
+    border: 1px solid var(--faceplate-imagebox-background);
+    position: relative;
+
+    background-color: transparent;
+    background-image: var(--faceplate-shading-light);
+    background-size: 4px 4px;
+    background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+}
+
+.faceplate-imagebox > img
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faceplate-imagebox > .faceplate-imagebox-righttop,
+.faceplate-imagebox > .faceplate-imagebox-lefttop,
+.faceplate-imagebox > .faceplate-imagebox-rightbottom,
+.faceplate-imagebox > .faceplate-imagebox-leftbottom
+{
+    padding: 2px;
+    position: absolute;
+    background: var(--faceplate-imagebox-background);
+    color: var(--faceplate-imagebox-color);
+}
+
+.faceplate-imagebox > .faceplate-imagebox-righttop
+{
+    top: 0;
+    right: 0;
+    padding-left: 12px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        10px 100%
+    );
+}
+
+.faceplate-imagebox > .faceplate-imagebox-lefttop
+{
+    top: 0;
+    left: 0;
+    padding-right: 12px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        calc(100% - 10px) 100%,
+        0% 100%
+    );
+}
+
+.faceplate-imagebox > .faceplate-imagebox-rightbottom
+{
+    bottom: 0;
+    right: 0;
+    padding-left: 12px;
+    clip-path: polygon(
+        10px 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+.faceplate-imagebox > .faceplate-imagebox-leftbottom
+{
+    bottom: 0;
+    left: 0;
+    padding-right: 12px;
+    clip-path: polygon(
+        0% 0%,
+        calc(100% - 10px) 0%,
+        100% 100%,
+        0% 100%
+    );
+}
+
