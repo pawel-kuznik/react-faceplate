@@ -11,84 +11,84 @@ type Story = StoryObj<typeof Button>;
 export const DefaultNormal: Story = {
   args: {
     label: "Button label",
-    style: "default"
+    color: "default"
   }
 };
 
 export const RedNormal: Story = {
   args: {
     label: "Button label",
-    style: "red"
+    color: "red"
   }
 };
 
 export const OrangeNormal: Story = {
   args: {
     label: "Button label",
-    style: "orange"
+    color: "orange"
   }
 };
 
 export const WhiteNormal: Story = {
   args: {
     label: "Button label",
-    style: "white"
+    color: "white"
   }
 };
 
 export const YellowNormal: Story = {
   args: {
     label: "Button label",
-    style: "yellow"
+    color: "yellow"
   }
 };
 
 export const LimeNormal: Story = {
   args: {
     label: "Button label",
-    style: "lime"
+    color: "lime"
   }
 };
 
 export const GreenNormal: Story = {
   args: {
     label: "Button label",
-    style: "green"
+    color: "green"
   }
 };
 
 export const BlueNormal: Story = {
   args: {
     label: "Button label",
-    style: "blue"
+    color: "blue"
   }
 };
 
 export const NavyNormal: Story = {
   args: {
     label: "Button label",
-    style: "navy"
+    color: "navy"
   }
 };
 
 export const BlackNormal: Story = {
   args: {
     label: "Button label",
-    style: "black"
+    color: "black"
   }
 };
 
 export const GrayNormal: Story = {
   args: {
     label: "Button label",
-    style: "gray"
+    color: "gray"
   }
 };
 
 export const DefaultBlock: Story = {
   args: {
     label: "Button label",
-    style: "default",
+    color: "default",
     block: true
   }
 };
@@ -96,7 +96,7 @@ export const DefaultBlock: Story = {
 export const RedBlock: Story = {
   args: {
     label: "Button label",
-    style: "red",
+    color: "red",
     block: true
   }
 };
@@ -104,7 +104,7 @@ export const RedBlock: Story = {
 export const OrangeBlock: Story = {
   args: {
     label: "Button label",
-    style: "orange",
+    color: "orange",
     block: true
   }
 };
@@ -112,7 +112,7 @@ export const OrangeBlock: Story = {
 export const WhiteBlock: Story = {
   args: {
     label: "Button label",
-    style: "white",
+    color: "white",
     block: true
   }
 };
@@ -120,7 +120,7 @@ export const WhiteBlock: Story = {
 export const YellowBlock: Story = {
   args: {
     label: "Button label",
-    style: "yellow",
+    color: "yellow",
     block: true
   }
 };
@@ -128,7 +128,7 @@ export const YellowBlock: Story = {
 export const LimeBlock: Story = {
   args: {
     label: "Button label",
-    style: "lime",
+    color: "lime",
     block: true
   }
 };
@@ -136,7 +136,7 @@ export const LimeBlock: Story = {
 export const GreenBlock: Story = {
   args: {
     label: "Button label",
-    style: "green",
+    color: "green",
     block: true
   }
 };
@@ -144,7 +144,7 @@ export const GreenBlock: Story = {
 export const BlueBlock: Story = {
   args: {
     label: "Button label",
-    style: "blue",
+    color: "blue",
     block: true
   }
 };
@@ -152,7 +152,7 @@ export const BlueBlock: Story = {
 export const NavyBlock: Story = {
   args: {
     label: "Button label",
-    style: "navy",
+    color: "navy",
     block: true
   }
 };
@@ -160,7 +160,7 @@ export const NavyBlock: Story = {
 export const BlackBlock: Story = {
   args: {
     label: "Button label",
-    style: "black",
+    color: "black",
     block: true
   }
 };
@@ -168,84 +168,84 @@ export const BlackBlock: Story = {
 export const GrayBlock: Story = {
   args: {
     label: "Button label",
-    style: "gray",
+    color: "gray",
     block: true
   }
 };
 
 export const DefaultMini = {
   args: {
-    style: "default",
+    color: "default",
     size: "mini"
   }
 };
 
 export const RedMini = {
   args: {
-    style: "red",
+    color: "red",
     size: "mini"
   }
 };
 
 export const OrangeMini = {
   args: {
-    style: "orange",
+    color: "orange",
     size: "mini"
   }
 };
 
 export const WhiteMini = {
   args: {
-    style: "white",
+    color: "white",
     size: "mini"
   }
 };
 
 export const YellowMini = {
   args: {
-    style: "yellow",
+    color: "yellow",
     size: "mini"
   }
 };
 
 export const LimeMini = {
   args: {
-    style: "lime",
+    color: "lime",
     size: "mini"
   }
 };
 
 export const GreenMini = {
   args: {
-    style: "green",
+    color: "green",
     size: "mini"
   }
 };
 
 export const BlueMini = {
   args: {
-    style: "blue",
+    color: "blue",
     size: "mini"
   }
 };
 
 export const NavyMini = {
   args: {
-    style: "navy",
+    color: "navy",
     size: "mini"
   }
 };
 
 export const BlackMini = {
   args: {
-    style: "black",
+    color: "black",
     size: "mini"
   }
 };
 
 export const GrayMini = {
   args: {
-    style: "gray",
+    color: "gray",
     size: "mini"
   }
 };

@@ -9,8 +9,14 @@ export interface ButtonProps {
 
     /**
      *  The style of the button.
+     *  @deprecated
      */
     style?: "default" | PaletteColor;
+
+    /**
+     *  The color of the button.
+     */
+    color?: "default" | PaletteColor;
 
     /**
      *  Should the button be display as a block?
@@ -40,7 +46,7 @@ export interface ButtonProps {
  *  A classing button component. The button can have a label, style (which mostly
  *  refers to the color), and typical onClick handler.
  */
-export function Button({ label, block = false, style = "default", size = "normal", onClick, submit = true }: ButtonProps) {
+export function Button({ label, block = false, color = "default", style = "default", size = "normal", onClick, submit = true }: ButtonProps) {
     
     const handleClick = () => {
         onClick?.();
@@ -48,7 +54,7 @@ export function Button({ label, block = false, style = "default", size = "normal
 
     const css = [
         "faceplate-button",
-        `faceplate-button-style-${style}`,
+        `faceplate-button-style-${style || color}`,
         `faceplate-button-size-${size}`
     ];
 

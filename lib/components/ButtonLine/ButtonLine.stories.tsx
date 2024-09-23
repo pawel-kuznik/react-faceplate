@@ -12,9 +12,9 @@ type Story = StoryObj<typeof ButtonLine>;
 
 const children = (
     <>
-        <Button style='green' label='Green'/>
-        <Button style='blue' label='Blue'/>
-        <Button style='red' label='Red'/>
+        <Button color='green' label='Green'/>
+        <Button color='blue' label='Blue'/>
+        <Button color='red' label='Red'/>
     </>
 );
 
