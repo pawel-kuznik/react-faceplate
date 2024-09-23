@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { PaletteColor } from "../CssTypes";
 
 export interface ButtonProps {
@@ -6,6 +7,13 @@ export interface ButtonProps {
      *  The label to display inside the button.
      */
     label?: string;
+
+    /**
+     *  A custom component holding an optional icon for the button. The custom component should
+     *  be something that renders in a 24x24px square when using normal size and 16x16px when using
+     *  mini size.
+     */
+    icon?: ReactNode;
 
     /**
      *  The style of the button.
@@ -46,7 +54,16 @@ export interface ButtonProps {
  *  A classing button component. The button can have a label, style (which mostly
  *  refers to the color), and typical onClick handler.
  */
-export function Button({ label, block = false, color = "default", style = "default", size = "normal", onClick, submit = true }: ButtonProps) {
+export function Button({
+    label,
+    icon,
+    block = false,
+    color = "default",
+    style = "default",
+    size = "normal", 
+    onClick,
+    submit = true 
+}: ButtonProps) {
     
     const handleClick = () => {
         onClick?.();
@@ -66,6 +83,7 @@ export function Button({ label, block = false, color = "default", style = "defau
             type={submit ? "submit" : "button"}
             onClick={handleClick}
         >
+            {icon && (<span className="faceplate-button-icon">{icon}</span>)}
             {label}
         </button>
     );

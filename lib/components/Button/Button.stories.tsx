@@ -15,6 +15,20 @@ export const DefaultNormal: Story = {
   }
 };
 
+export const NormalWithIcon: Story = {
+  args: {
+    label: "With icon",
+    icon: (<img src="https://cataas.com/cat?type=square" alt="cat" style={{ width: '24px', height: '24px' }}/>)
+  }
+};
+
+export const MinilWithIcon: Story = {
+  args: {
+    size: "mini",
+    icon: (<img src="https://cataas.com/cat?type=square" alt="cat" style={{ width: '16px', height: '16px' }}/>)
+  }
+};
+
 export const RedNormal: Story = {
   args: {
     label: "Button label",

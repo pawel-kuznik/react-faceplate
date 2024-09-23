@@ -22,6 +22,18 @@
     transition: background .4s;
 }
 
+.faceplate-button.faceplate-button-size-normal:has(.faceplate-button-icon) {
+
+    grid-template-columns: min-content auto 1fr;
+}
+
+.faceplate-button.faceplate-button-size-normal .faceplate-button-icon
+{
+    margin-left: -4px;
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
 .faceplate-button.faceplate-button-size-normal.faceplate-button-block
 {
     border: 1px solid var(--faceplate-button-accent);
