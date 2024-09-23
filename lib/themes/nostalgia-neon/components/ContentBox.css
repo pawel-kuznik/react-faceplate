@@ -46,6 +46,25 @@
 }
 
 /**
+ *  When it has an editable heading, we want to make it a little bit bigger
+ *  and make sure that padding matches the additional padding the input brings.
+ */
+.faceplate-contentbox-label:has(.faceplate-editableheading)
+{
+    height: 24px;
+    top: calc(-24px - 2px - 4px - 4px);
+    padding-left: 2px;
+}
+
+/**
+ *  Change the color of the input inside the editable heading.
+ */
+.faceplate-contentbox-label .faceplate-editableheading > input
+{
+    color: var(--faceplate-controls-font-bg);
+}
+
+/**
  *  When the content box has a side toolbar, some space needs to be reserverd
  *  on the right. 
  */

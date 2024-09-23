@@ -28,6 +28,11 @@ export interface InputProps {
     max?: number | string;
 
     /**
+     *  Should the input be readonly?
+     */
+    readonly?: boolean;
+
+    /**
      *  The default value of the input.
      */
     defaultValue?: string | number;
@@ -49,7 +54,7 @@ export interface InputProps {
  *  can be simplified. For example, the onChange() provides changed value instead 
  *  of instance of change event. In most cases this is perfectly fine.
  */
-export function Input({ name, list, type, min, max, defaultValue, valueRef, onChange } : InputProps) {
+export function Input({ name, list, readonly, type, min, max, defaultValue, valueRef, onChange } : InputProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
@@ -62,6 +67,7 @@ export function Input({ name, list, type, min, max, defaultValue, valueRef, onCh
     return (
         <input
             className="faceplate-input"
+            readOnly={readonly}
             type={type}
             name={name}
             min={min}

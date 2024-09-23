@@ -6,6 +6,7 @@ export * from "./components/ButtonLine";
 export * from "./components/ContentBox";
 export * from "./components/DataTable";
 export * from "./components/DialogFrame";
+export * from "./components/EditableHeading";
 export * from "./components/FormField";
 export * from "./components/FormFieldLayout";
 export * from "./components/FormGroup";

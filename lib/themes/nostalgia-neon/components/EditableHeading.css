@@ -1,0 +1,17 @@
+.faceplate-editableheading
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.faceplate-editableheading > input.faceplate-input
+{
+    font-size: inherit;
+    border-bottom: 0;
+}
+
+.faceplate-editableheading > input.faceplate-input:not(:focus),
+.faceplate-editableheading > input.faceplate-input:read-only
+{
+    background: none;
+}

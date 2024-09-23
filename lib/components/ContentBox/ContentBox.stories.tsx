@@ -4,6 +4,7 @@ import { ContentBox } from './ContentBox';
 import { Button } from '../Button';
 import { DataTable } from '../DataTable';
 import { ImageBox } from '../ImageBox';
+import { EditableHeading } from '../EditableHeading';
 
 export default {
     title: 'components/ContentBox',
@@ -30,6 +31,19 @@ export const Bare: Story = {
 export const WithLabel: Story = {
     args: {
         label: "ContentBox label",
+        children: (
+            <>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+                </p>
+            </>
+        )
+    }
+};
+
+export const WithEditableLabel: Story = {
+    args: {
+        label: (<EditableHeading level={3} defaultValue={"ContentBox label"}/>),
         children: (
             <>
                 <p>

@@ -19,4 +19,10 @@ export const NumberInput: Story = {
       type: "number"
     }
 };
+
+export const ReadOnlyInput: Story = {
+  args: {
+    readonly: true
+  }
+};
   

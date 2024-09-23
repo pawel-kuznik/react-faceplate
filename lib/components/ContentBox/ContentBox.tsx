@@ -7,7 +7,7 @@ export interface ContentBoxProps {
     /**
      *  The label assigned to the content.
      */
-    label?: string;
+    label?: string | ReactNode;
 
     /**
      *  Should the content box be faded? This will only affect decorations.
