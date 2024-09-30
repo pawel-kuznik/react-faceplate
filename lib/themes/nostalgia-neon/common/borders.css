@@ -1,0 +1,12 @@
+:root {
+    
+    /**
+     *  The general border that should be used in most of the cases.
+     */
+    --faceplate-border: 1px solid var(--faceplate-controls-font-color);
+    
+    /**
+     *  The border that should be used by layout component to carve a box.
+     */
+    --faceplate-layout-border: 2px solid var(--faceplate-controls-font-color);
+}

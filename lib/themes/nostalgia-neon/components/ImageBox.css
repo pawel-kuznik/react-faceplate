@@ -3,7 +3,7 @@
     --faceplate-imagebox-color: var(--faceplate-color-white);
     --faceplate-imagebox-background: var(--faceplate-color-gray); 
 
-    border: 1px solid var(--faceplate-imagebox-background);
+    border: var(--faceplate-border);
     position: relative;
 
     background-color: transparent;

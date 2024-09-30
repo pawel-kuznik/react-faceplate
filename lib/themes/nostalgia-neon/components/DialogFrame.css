@@ -2,7 +2,7 @@
 {
     position: absolute;
 
-    border: 2px solid var(--faceplate-controls-font-color);
+    border: var(--faceplate-layout-border);
     box-shadow: var(--faceplate-box-shadow);
     
     color: var(--faceplate-controls-font-color);

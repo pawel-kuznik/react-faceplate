@@ -1,7 +1,7 @@
 .faceplate-placeholder
 {
     position: relative;
-    border: 2px solid var(--faceplate-color-red);
+    border: var(--faceplate-border);
     box-sizing: border-box;
 }
 

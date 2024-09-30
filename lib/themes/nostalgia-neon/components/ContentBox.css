@@ -5,7 +5,7 @@
 {
     position: relative;
     padding: 4px;
-    border: 2px solid var(--faceplate-controls-font-color);
+    border: var(--faceplate-layout-border);
     box-shadow: var(--faceplate-box-shadow);
 
     margin-top: 16px;

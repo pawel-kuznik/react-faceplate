@@ -4,7 +4,7 @@
     box-sizing: border-box;
 
     border: none;
-    border-bottom: 1px solid var(--faceplate-color-gray);
+    border-bottom: var(--faceplate-border);
 
     color: var(--faceplate-controls-font-color);
     text-shadow: var(--faceplate-text-shadow);

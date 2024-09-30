@@ -19,7 +19,7 @@
 {
     background: var(--faceplate-controls-font-bg);
     color: var(--faceplate-controls-font-color);
-    border: 1px solid var(--faceplate-controls-font-color);
+    border: var(--faceplate-border);
     padding: 4px;
 }
 
