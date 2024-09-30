@@ -6,6 +6,8 @@
     padding-bottom: 1.25rem;
 
     background: var(--faceplate-controls-font-bg);
+
+    min-height: 100%;
 }
 
 .faceplate-page-centered

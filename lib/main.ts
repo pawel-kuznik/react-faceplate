@@ -21,6 +21,7 @@ export * from "./components/Placeholder";
 export * from "./components/ScreenBox";
 export * from "./components/SelectInput";
 export * from "./components/SideToolbox";
+export * from "./components/StatsList";
 export * from "./components/Tabs";
 export * from "./components/TabsFrame";
 export * from "./components/TextArea";

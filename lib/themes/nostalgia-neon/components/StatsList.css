@@ -1,0 +1,71 @@
+.faceplate-statslist
+{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 16px;
+}
+
+/** Alignment: left-axis */
+
+.faceplate-statslist-alignment-left-axis .faceplate-statslist-row-label
+{
+    justify-self: right;
+}
+
+/** Alignment: left-edges */
+
+.faceplate-statslist-alignment-left-edges .faceplate-statslist-row-value
+{
+    justify-self: right;
+}
+
+/** Alignment: right */
+
+.faceplate-statslist-alignment-right .faceplate-statslist-row-value,
+.faceplate-statslist-alignment-right .faceplate-statslist-row-label
+{
+    justify-self: right;
+}
+
+/** Alignment: right-axis **/
+
+.faceplate-statslist-alignment-right-axis .faceplate-statslist-row-label
+{
+    justify-self: right;
+}
+
+/** Alignment: right-edges **/
+
+.faceplate-statslist-alignment-right-edges .faceplate-statslist-row-label
+{
+    justify-self: right;
+}
+
+.faceplate-statslist-alignment-right-edges .faceplate-statslist-row-value
+{
+    justify-self: left;
+}
+
+/** Alignment: right-axis */
+
+.faceplate-statslist-alignment-right-axis .faceplate-statslist-row-value
+{
+    justify-self: right;
+}
+
+.faceplate-statslist-alignment-right-axis .faceplate-statslist-row-label
+{
+    justify-self: left;
+}
+
+
+.faceplate-statslist-row
+{
+    display: contents;
+}
+
+.faceplate-statslist-row-label
+{
+    font-size: 0.9em;
+    font-weight: 600;
+}

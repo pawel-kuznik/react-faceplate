@@ -1,0 +1,1 @@
+export type RowAlignment = "left" | "left-axis" | "left-edges" | "right-edges" | "right-axis" | "right";
