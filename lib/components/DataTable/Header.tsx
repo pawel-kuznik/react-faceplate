@@ -5,7 +5,7 @@ export interface HeaderProps {
     /**
      *  Properties of columns to render.
      */
-    columns: ColumnProps[];
+    columns: Array<ColumnProps|string>;
 };
 
 /**
@@ -15,7 +15,10 @@ export function Header({ columns }: HeaderProps) {
     return (
         <thead>
             <tr>
-                {columns.map((c, i) => (<Column key={i} {...c}/>))}
+                {columns.map((c, i) => {
+                    if (typeof(c) === "string") return <Column key={i} label={c}/>;
+                    return <Column key={i} {...c}/>
+                })}
             </tr>
         </thead>
     );

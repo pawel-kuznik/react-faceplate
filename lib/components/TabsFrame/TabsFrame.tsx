@@ -1,4 +1,4 @@
-import { Children, FC, Fragment, ReactElement, ReactNode, useState } from "react";
+import { Children, Fragment, ReactElement, ReactNode, useState } from "react";
 import { Tabs } from "../Tabs";
 import { Tab, TabProps } from "./Tab";
 

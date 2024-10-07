@@ -19,6 +19,7 @@
 @import "./components/Page.css";
 @import "./components/PageHeader.css";
 @import "./components/Placeholder.css";
+@import "./components/ProgressBar.css";
 @import "./components/ScreenBox.css";
 @import "./components/SelectInput.css";
 @import "./components/SideToolbox.css";

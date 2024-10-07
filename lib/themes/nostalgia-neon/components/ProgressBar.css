@@ -1,0 +1,55 @@
+.faceplate-progressbar
+{
+    height: 1em;
+    border: var(--faceplate-border);
+    padding: 1px;
+}
+
+.faceplate-progressbar-bar
+{
+    height: 100%;
+    background: var(--faceplate-progressbar-accent, var(--faceplate-border-color));
+
+    font-size: 0.9em;
+    padding: 1px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+}
+
+/**
+ *  Colors
+ */
+.faceplate-progressbar.faceplate-progressbar-color-red      { --faceplate-progressbar-accent: var(--faceplate-color-red); }
+.faceplate-progressbar.faceplate-progressbar-color-orange   { --faceplate-progressbar-accent: var(--faceplate-color-orange); }
+.faceplate-progressbar.faceplate-progressbar-color-white    { --faceplate-progressbar-accent: var(--faceplate-color-white); }
+.faceplate-progressbar.faceplate-progressbar-color-yellow   { --faceplate-progressbar-accent: var(--faceplate-color-yellow); }
+.faceplate-progressbar.faceplate-progressbar-color-lime     { --faceplate-progressbar-accent: var(--faceplate-color-lime); }
+.faceplate-progressbar.faceplate-progressbar-color-green    { --faceplate-progressbar-accent: var(--faceplate-color-green); }
+.faceplate-progressbar.faceplate-progressbar-color-blue     { --faceplate-progressbar-accent: var(--faceplate-color-blue); }
+.faceplate-progressbar.faceplate-progressbar-color-navy     { --faceplate-progressbar-accent: var(--faceplate-color-navy); }
+.faceplate-progressbar.faceplate-progressbar-color-black    { --faceplate-progressbar-accent: var(--faceplate-color-black); }
+.faceplate-progressbar.faceplate-progressbar-color-gray     { --faceplate-progressbar-accent: var(--faceplate-color-gray); }
+
+/**
+ *  Adjustments for other components
+ */
+.faceplate-datatable > tbody > tr > td:has(.faceplate-progressbar:first-child:last-child)
+{
+    padding: 0;
+    position: relative;
+}
+
+.faceplate-datatable > tbody > tr > td > .faceplate-progressbar
+{
+    position: absolute;
+    height: unset;
+    top: -1px;
+    bottom: -1px;
+    left: -2px;
+    right: 0px;
+
+    border-right-width: 2px;
+    border-left-width: 2px;
+}

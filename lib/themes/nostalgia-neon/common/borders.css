@@ -1,9 +1,14 @@
 :root {
+
+    /**
+     *  In general the border matches the font color.
+     */
+    --faceplate-border-color: var(--faceplate-controls-font-color);
     
     /**
      *  The general border that should be used in most of the cases.
      */
-    --faceplate-border: 1px solid var(--faceplate-controls-font-color);
+    --faceplate-border: 1px solid var(--faceplate-border-color);
     
     /**
      *  The border that should be used by layout component to carve a box.

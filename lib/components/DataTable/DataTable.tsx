@@ -6,9 +6,10 @@ import { Body } from "./Body";
 export interface DataTableProps {
 
     /**
-     *  Definitions for columns.
+     *  Definitions for columns. The array should contain properies
+     *  for each column or the column name (when only string supplied).
      */
-    columns?: ColumnProps[];
+    columns?: Array<ColumnProps|string>;
 
     /**
      *  The data to show in the table.
