@@ -58,7 +58,7 @@ export function Button({
     label,
     icon,
     block = false,
-    color = "default",
+    color,
     style = "default",
     size = "normal", 
     onClick,
@@ -71,7 +71,7 @@ export function Button({
 
     const css = [
         "faceplate-button",
-        `faceplate-button-style-${style || color}`,
+        (color === undefined && style !== undefined) ? `faceplate-button-color-${style}` : `faceplate-button-color-${color || 'default'}`,
         `faceplate-button-size-${size}`
     ];
 

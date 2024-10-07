@@ -2,6 +2,9 @@
 {
     --faceplate-controls-font-color: var(--faceplate-color-white);
     --faceplate-controls-font-bg: var(--faceplate-color-black);
+    --faceplate-border-color: var(--faceplate-controls-font-color);
+    --faceplate-border: 1px solid var(--faceplate-border-color);
+    --faceplate-layout-border: 2px solid var(--faceplate-border-color);
     --faceplate-imagebox-color: var(--faceplate-color-black);
     --faceplate-imagebox-background: var(--faceplate-color-white);
     --faceplate-text-shadow: 1px 0px 1px var(--faceplate-color-red), -1px 0px 1px var(--faceplate-color-blue);

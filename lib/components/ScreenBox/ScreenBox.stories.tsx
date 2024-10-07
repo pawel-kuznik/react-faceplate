@@ -6,6 +6,7 @@ import { Button } from '../Button';
 import { ContentBox } from '../ContentBox';
 import { DataTable } from '../DataTable';
 import { EditableHeading } from '../EditableHeading';
+import { ProgressBar } from '../ProgressBar';
 
 export default {
   title: 'components/ScreenBox',
@@ -65,6 +66,31 @@ export const ExmapleThree: Story = {
         </ContentBox>
         <ContentBox>
           <Button label="test"/>
+        </ContentBox>
+      </>
+    )
+  }
+};
+
+export const TableExample: Story = {
+  args: {
+    children: (
+      <>
+        <ContentBox label="Content">
+        <DataTable
+            columns={[
+              { label: "Column 1" },
+              { label: "Column 2" },
+              { label: "Column 3" }
+            ]}
+            data={[
+              ["Row 1", "1", <ProgressBar current={0.25} color="red"/> ],
+              ["Row 2", "2", <ProgressBar current={0.45} color="blue"/>],
+              ["Row 3", "4", <ProgressBar current={0.55} color="blue"/>],
+              ["Row 4", "2", <ProgressBar current={0.96} color="green"/>],
+              ["Row 5", "1", <ProgressBar current={1} color="orange"/>],
+            ]}
+          />
         </ContentBox>
       </>
     )

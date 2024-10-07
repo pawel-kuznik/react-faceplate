@@ -16,6 +16,8 @@
     padding-right: 0.5em;
     padding-bottom: 3px;
     box-sizing: border-box;
+
+    transition: width .2s;
 }
 
 /**

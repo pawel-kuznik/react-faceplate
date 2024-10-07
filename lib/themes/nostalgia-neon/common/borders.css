@@ -13,5 +13,5 @@
     /**
      *  The border that should be used by layout component to carve a box.
      */
-    --faceplate-layout-border: 2px solid var(--faceplate-controls-font-color);
+    --faceplate-layout-border: 2px solid var(--faceplate-border-color);
 }
