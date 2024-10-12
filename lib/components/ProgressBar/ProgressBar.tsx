@@ -44,9 +44,8 @@ export function ProgressBar({ current, color = "default", total = 1, children }:
 
     return (
         <div className={css.join(" ")}>
-            <div style={barStyles} className="faceplate-progressbar-bar">
-                {children}
-            </div>
+            <div style={barStyles} className="faceplate-progressbar-bar"/>
+            {children && <div className="faceplate-progressbar-content">{children}</div>}
         </div>
     );
 };

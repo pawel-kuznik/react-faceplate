@@ -96,3 +96,16 @@ export const TableExample: Story = {
     )
   }
 };
+
+export const WithPattern: Story = {
+  args: {
+    pattern: "polka",
+    children: (
+      <>
+        <FormField type="text" label="Input one" name="one" />
+        <FormField type="text" label="Input two" name="two" />
+        <FormField type="select" label="Select input" options={[]} labels={[]} name="three" />
+      </>
+    )
+  }
+};

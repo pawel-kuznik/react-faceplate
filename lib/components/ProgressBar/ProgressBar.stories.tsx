@@ -66,9 +66,9 @@ export const Lime: Story = {
 
 export const Green: Story = {
     args: {
-        current: .5,
+        current: .25,
         color: "green",
-        children: "Long text with verous letters."
+        children: "Long text with various letters."
     }
 };
 

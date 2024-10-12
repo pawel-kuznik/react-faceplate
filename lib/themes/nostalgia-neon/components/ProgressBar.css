@@ -3,6 +3,8 @@
     height: 1em;
     border: var(--faceplate-border);
     padding: 1px;
+
+    position: relative;
 }
 
 .faceplate-progressbar-bar
@@ -10,14 +12,29 @@
     height: 100%;
     background: var(--faceplate-progressbar-accent, var(--faceplate-border-color));
 
-    font-size: 0.9em;
+    transition: width .2s;
+}
+
+.faceplate-progressbar-content
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
     padding: 1px;
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-bottom: 3px;
-    box-sizing: border-box;
 
-    transition: width .2s;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+.faceplate-progressbar-content:empty
+{
+    padding: 0;
 }
 
 /**

@@ -1,0 +1,11 @@
+:root {
+
+    --faceplate-pattern-color: rgba(255, 0,0, .2);
+}
+
+.faceplate-pattern-polka 
+{
+    background-color: var(--faceplate-controls-font-bg);
+    background-image: radial-gradient(var(--faceplate-pattern-color) 1px, transparent 1px);
+    background-size: var(--faceplate-pattern-size, 8px) var(--faceplate-pattern-size, 8px);
+}

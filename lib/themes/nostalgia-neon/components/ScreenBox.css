@@ -9,11 +9,12 @@
     --faceplate-imagebox-background: var(--faceplate-color-white);
     --faceplate-text-shadow: 1px 0px 1px var(--faceplate-color-red), -1px 0px 1px var(--faceplate-color-blue);
     --faceplate-box-shadow: 1px 0px 2px var(--faceplate-color-red), -1px 0px 2px var(--faceplate-color-blue);
+    --faceplate-pattern-color: rgba(120, 120, 120, 0.3);
 
     position: relative;
 
     color: var(--faceplate-controls-font-color);
-    background: #061a22;
+    background-color: #061a22;
     padding: 16px;
 
     filter: blur(0.25px);
@@ -52,4 +53,9 @@
     80% { opacity: 0.8; }
     90% { opacity: 0.5; }
     100% { opacity: 1; }
+}
+
+.faceplate-screenbox .faceplate-input 
+{
+    background-color: #061a22;
 }
