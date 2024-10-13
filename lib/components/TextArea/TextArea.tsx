@@ -23,6 +23,11 @@ export interface TextAreaProps {
     onChange?: (value: string) => void;
 
     /**
+     *  A callback to call when user leaves the input.
+     */
+    onBlur?: (value: string) => void;
+
+    /**
      *  Number of rows that the text area shows to the user.
      */
     rows?: number;
@@ -34,7 +39,7 @@ export interface TextAreaProps {
  *  textarea element, but exposes less of HTML API in favour of more streamlined
  *  and easier API.
  */
-export function TextArea({ name, defaultValue, valueRef, onChange, rows }: TextAreaProps) {
+export function TextArea({ name, defaultValue, valueRef, onChange, onBlur, rows }: TextAreaProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
@@ -44,12 +49,21 @@ export function TextArea({ name, defaultValue, valueRef, onChange, rows }: TextA
         onChange?.(value);
     }
 
+    const handleBlur = (event: ChangeEvent) => {
+
+        const value = (event.target as HTMLInputElement).value;
+
+        if (valueRef) valueRef.current= value;
+        onBlur?.(value);
+    };
+
     return (
         <textarea
             className="faceplate-textarea"
             name={name}
             rows={rows}
             onChange={handleChange}
+            onBlur={handleBlur}
         >
             {defaultValue || valueRef?.current}
         </textarea>

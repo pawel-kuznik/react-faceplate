@@ -88,9 +88,14 @@ export interface FormFieldProps {
      *  A callback to call when user changed the value. 
      */
     onChange?: (value: string) => void;
+
+    /**
+     *  A callback to call when user leaves the input.
+     */
+    onBlur?: (value: string) => void;
 };
 
-export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, rows, defaultValue, valueRef, onChange }: FormFieldProps) {
+export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, rows, defaultValue, valueRef, onChange, onBlur }: FormFieldProps) {
 
     // the params that are safe to pass to an of the input types.
     const inputArgs: any = {
@@ -104,7 +109,8 @@ export function FormField({ layout = "column", description, label, name, type, m
         titles,
         rows,
         valueRef,
-        onChange
+        onChange,
+        onBlur
     };
 
     // only pass default value when there is a defined value

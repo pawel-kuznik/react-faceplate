@@ -38,6 +38,11 @@ export interface SelectInputProps {
      *  A callback called when user changes the value of the input.
      */
     onChange?: (value: string) => void;
+
+    /**
+     *  A callback to call when user leaves the input.
+     */
+    onBlur?: (value: string) => void;
 };
 
 /**
@@ -45,7 +50,7 @@ export interface SelectInputProps {
  *  Input component, this component exists to simplify select element handling
  *  and integrate it with the rest of the library. 
  */
-export function SelectInput({ name, options, labels, titles, onChange, defaultValue, valueRef }: SelectInputProps) {
+export function SelectInput({ name, options, labels, titles, onChange, onBlur, defaultValue, valueRef }: SelectInputProps) {
 
     const inputRef = useRef<HTMLSelectElement|null>(null);
 
@@ -54,6 +59,14 @@ export function SelectInput({ name, options, labels, titles, onChange, defaultVa
         const value = (event.target as HTMLSelectElement).value
         if (valueRef) valueRef.current = value; 
         onChange?.(value);
+    };
+
+    const handleBlur = (event: ChangeEvent) => {
+
+        const value = (event.target as HTMLInputElement).value;
+
+        if (valueRef) valueRef.current= value;
+        onBlur?.(value);
     };
 
     const generateTitle = (o: string, k: number) => {
@@ -72,7 +85,7 @@ export function SelectInput({ name, options, labels, titles, onChange, defaultVa
     })();
     
     return (
-        <select className="faceplate-selectinput" ref={inputRef} onChange={handleChange} name={name} defaultValue={defaultValue || valueRef?.current} title={title}>
+        <select className="faceplate-selectinput" ref={inputRef} onChange={handleChange} onBlur={handleBlur} name={name} defaultValue={defaultValue || valueRef?.current} title={title}>
             {options.map((o, k) => {
 
                 const label = typeof (labels) === "function" ? labels(o) : labels[k];

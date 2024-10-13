@@ -46,6 +46,11 @@ export interface InputProps {
      *  A callback to call when user changed the value. 
      */
     onChange?: (value: string) => void;
+
+    /**
+     *  A callback to call when user leaves the input.
+     */
+    onBlur?: (value: string) => void;
 };
 
 /**
@@ -54,7 +59,7 @@ export interface InputProps {
  *  can be simplified. For example, the onChange() provides changed value instead 
  *  of instance of change event. In most cases this is perfectly fine.
  */
-export function Input({ name, list, readonly, type, min, max, defaultValue, valueRef, onChange } : InputProps) {
+export function Input({ name, list, readonly, type, min, max, defaultValue, valueRef, onChange, onBlur } : InputProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
@@ -62,7 +67,15 @@ export function Input({ name, list, readonly, type, min, max, defaultValue, valu
 
         if (valueRef) valueRef.current = value;
         onChange?.(value);
-    }
+    };
+
+    const handleBlur = (event: ChangeEvent) => {
+
+        const value = (event.target as HTMLInputElement).value;
+
+        if (valueRef) valueRef.current= value;
+        onBlur?.(value);
+    };
 
     return (
         <input
@@ -75,6 +88,7 @@ export function Input({ name, list, readonly, type, min, max, defaultValue, valu
             list={list}
             defaultValue={defaultValue || valueRef?.current}
             onChange={handleChange}
+            onBlur={handleBlur}
         />
     );
 }
