@@ -27,7 +27,7 @@ export const ExampleOne: Story = {
   }
 };
 
-export const ExmapleTwo: Story = {
+export const ExampleTwo: Story = {
   args: {
     children: (
       <FormGroup>
@@ -40,7 +40,7 @@ export const ExmapleTwo: Story = {
   }
 };
 
-export const ExmapleThree: Story = {
+export const ExampleThree: Story = {
   args: {
     children: (
       <>

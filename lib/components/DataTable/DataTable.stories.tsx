@@ -22,3 +22,18 @@ export const DefaultNormal: Story = {
     ]
   }
 };
+
+export const WithDifferentColumnSizes: Story = {
+  args: {
+    columns: [
+      { label: "Long first column" },
+      { label: "Medium second column", width: "25%" },
+      { label: "Short", width: 50 }
+    ],
+    data: [
+      [ "Long cell", "Medium cell", "Short" ],
+      [ "Long cell", "Medium cell", "Short" ],
+      [ "Long cell", "Medium cell", "Short" ]
+    ]
+  }
+}

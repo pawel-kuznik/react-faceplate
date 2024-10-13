@@ -28,6 +28,20 @@ export const Bare: Story = {
     }
 };
 
+export const WithPattern: Story ={
+    args: {
+        label: "ContentBox label",
+        pattern: "polka",
+        children: (
+            <>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Placerat nec metus dictum himenaeos est. Diam ut diam luctus cubilia suspendisse facilisis. Ex efficitur mauris tempus inceptos felis. Urna velit nascetur habitant ex senectus bibendum. Penatibus nam montes litora magnis odio. Rhoncus iaculis sapien mus sociosqu platea suspendisse aenean metus ligula.
+                </p>
+            </>
+        )
+    }
+};
+
 export const WithLabel: Story = {
     args: {
         label: "ContentBox label",

@@ -55,7 +55,8 @@
     100% { opacity: 1; }
 }
 
-.faceplate-screenbox .faceplate-input 
+.faceplate-screenbox .faceplate-input,
+.faceplate-screenbox .faceplate-selectinput
 {
     background-color: #061a22;
 }

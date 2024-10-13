@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { SideToolbox } from "../SideToolbox";
 import { ButtonLine } from "../ButtonLine";
+import { Pattern } from "../CssTypes";
 
 export interface ContentBoxProps {
 
@@ -25,6 +26,12 @@ export interface ContentBoxProps {
     topToolbar?: ReactNode;
 
     /**
+     *  A possible pattern that should be applied to the background
+     *  of the box.
+     */
+    pattern?: Pattern;
+
+    /**
      *  The content of the box.
      */
     children?: ReactNode;
@@ -34,12 +41,14 @@ export interface ContentBoxProps {
  *  This is a component that is meant to render a box around an arbitrary content.
  *  The content can be assigned a label which would effectively be a title.
  */
-export function ContentBox({ label, faded, topToolbar, sideToolbar, children }: ContentBoxProps) {
+export function ContentBox({ label, faded, topToolbar, pattern, sideToolbar, children }: ContentBoxProps) {
 
     const css = [
         "faceplate-contentbox",
         faded ? "faceplate-contentbox-faded" : ""
     ];
+
+    if (pattern) css.push(`faceplate-pattern-${pattern}`);
 
     return (
         <div className={css.join(" ")}>
