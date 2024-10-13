@@ -22,7 +22,7 @@ export const NormalWithIcon: Story = {
   }
 };
 
-export const MinilWithIcon: Story = {
+export const MiniWithIcon: Story = {
   args: {
     size: "mini",
     icon: (<img src="https://cataas.com/cat?type=square" alt="cat" style={{ width: '16px', height: '16px' }}/>)

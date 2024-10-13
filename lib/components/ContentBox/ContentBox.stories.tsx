@@ -133,11 +133,13 @@ export const Nested: Story = {
 
 export const WithTopSidebar: Story = {
     args: {
+        label: "Title",
         topToolbar: (
             <>
-                <Button size="mini" style="blue" />
-                <Button size="mini" style="green" />
-                <Button size="mini" style="red" />
+                <Button label="Important action"/>
+                <Button size="mini" color="blue" />
+                <Button size="mini" color="green" />
+                <Button size="mini" color="red" />
             </>
         ),
         children: ( <div>Content</div> )

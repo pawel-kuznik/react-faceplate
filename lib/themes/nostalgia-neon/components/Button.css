@@ -15,6 +15,7 @@
     padding-right: calc(2* var(--faceplate-control-spacing));
     padding-top: var(--faceplate-control-spacing);
     padding-bottom: var(--faceplate-control-spacing);
+    white-space: nowrap;
 
     display: inline-grid;
     grid-template-columns: auto 1fr;

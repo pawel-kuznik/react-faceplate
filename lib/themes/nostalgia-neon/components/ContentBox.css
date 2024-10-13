@@ -26,14 +26,15 @@
 .faceplate-contentbox-label
 {
     position: absolute;
-    height: 16px;
-    top: calc(-16px - 2px - 4px - 4px);
+    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
+    top: calc(-1 * (var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing)) - 8px);
     left: -2px;
-    padding: 4px;
-    padding-left: 6px;
+    padding-top: var(--faceplate-control-spacing);
+    padding-bottom: var(--faceplate-control-spacing);
+    padding-left: calc(var(--faceplate-control-spacing) + 2px);
     padding-right: 16px;
-    font-weight: bold;
     letter-spacing: 0.25px;
+    font-weight: bold;
     background: var(--faceplate-controls-font-color);
     color: var(--faceplate-controls-font-bg);
     clip-path: polygon(
@@ -43,6 +44,7 @@
         0% 100%
     );
     box-shadow: var(--faceplate-box-shadow);
+    min-width: 200px;
 }
 
 /**
@@ -90,8 +92,11 @@
 .faceplate-contentbox-toptoolbar
 {
     position: absolute;
-    top: -24px;
+    top: calc(-1 * (var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing)) - 8px);
     right: -2px;
+    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
+    padding-top: var(--faceplate-control-spacing);
+    padding-bottom: var(--faceplate-control-spacing);
     padding-left: 18px;
     padding-right: 6px;
     clip-path: polygon(
@@ -101,6 +106,8 @@
         0% 100%
     );
     background: var(--faceplate-controls-font-color);
+    background: var(--faceplate-controls-font-color);
+    color: var(--faceplate-controls-font-bg);
 }
 
 .faceplate-contentbox:has(> .faceplate-contentbox-content > .faceplate-datatable:first-child) 
@@ -130,4 +137,9 @@
 {
     border-left: 0;
     border-right: 0;
+}
+
+.faceplate-contentbox-label .faceplate-editableheading .faceplate-input
+{
+    background: transparent;
 }

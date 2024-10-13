@@ -2,12 +2,20 @@
 {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1em;
 }
 
 .faceplate-editableheading > input.faceplate-input
 {
     font-size: inherit;
     border-bottom: 0;
+    font-weight: inherit;
+
+    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
+    padding-top: var(--faceplate-control-spacing);
+    padding-bottom: var(--faceplate-control-spacing);
+    margin-top: calc(-1 * var(--faceplate-control-spacing));
+    margin-bottom: calc(-1 * var(--faceplate-control-spacing));
 }
 
 .faceplate-editableheading > input.faceplate-input:not(:focus),
