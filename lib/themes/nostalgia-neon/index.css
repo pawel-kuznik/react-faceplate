@@ -5,6 +5,7 @@
 @import "./common/spacing.css";
 @import "./common/typography.css";
 
+@import "./components/BarChart.css";
 @import "./components/Button.css";
 @import "./components/ButtonLine.css";
 @import "./components/ContentBox.css";

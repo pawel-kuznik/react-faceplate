@@ -7,8 +7,8 @@
     --faceplate-layout-border: 2px solid var(--faceplate-border-color);
     --faceplate-imagebox-color: var(--faceplate-color-black);
     --faceplate-imagebox-background: var(--faceplate-color-white);
-    --faceplate-text-shadow: 1px 0px 1px var(--faceplate-color-red), -1px 0px 1px var(--faceplate-color-blue);
-    --faceplate-box-shadow: 1px 0px 2px var(--faceplate-color-red), -1px 0px 2px var(--faceplate-color-blue);
+    /* --faceplate-text-shadow: 1px 0px 1px var(--faceplate-color-red), -1px 0px 1px var(--faceplate-color-blue);
+    --faceplate-box-shadow: 1px 0px 2px var(--faceplate-color-red), -1px 0px 2px var(--faceplate-color-blue); */
     --faceplate-pattern-color: rgba(120, 120, 120, 0.3);
 
     position: relative;
@@ -37,8 +37,6 @@
         linear-gradient(90deg, rgba(224,82,91,0.1) 0%, rgba(66,154,121,0.1) 45%, rgba(72,140,155,0.1) 100%);
 
     background-size: 3px 4px;
-
-    animation: faceplate-screenbox-flicker 0.07s infinite;
 }
 
 @keyframes faceplate-screenbox-flicker {

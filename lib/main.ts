@@ -1,5 +1,6 @@
 export * from "./components/CssTypes/PaletteColor";
 
+export * from "./components/BarChart";
 export * from "./components/BasicForm";
 export * from "./components/Button";
 export * from "./components/ButtonLine";

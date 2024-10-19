@@ -7,6 +7,7 @@ import { ContentBox } from '../ContentBox';
 import { DataTable } from '../DataTable';
 import { EditableHeading } from '../EditableHeading';
 import { ProgressBar } from '../ProgressBar';
+import { BarChart } from '../BarChart';
 
 export default {
   title: 'components/ScreenBox',
@@ -112,6 +113,27 @@ export const WithPattern: Story = {
         <FormField type="text" label="Input two" name="two" />
         <FormField type="select" label="Select input" options={[]} labels={[]} name="three" />
       </>
+    )
+  }
+};
+
+export const WithBarChart: Story = {
+  args: {
+    children: (
+      <ContentBox>
+        <BarChart
+          height={120}
+          colors="white"
+          data={[
+            1, 2, 3, 4, 5,
+            0, 12, 8, 7, 9
+          ]}
+          labels={[
+            "0", "1", "2", "3", "4",
+            "5", "6", "7", "8", "9"
+          ]}
+        />
+      </ContentBox>
     )
   }
 };

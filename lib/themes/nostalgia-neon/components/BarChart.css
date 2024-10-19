@@ -1,0 +1,33 @@
+.faceplate-barchart
+{
+    width: 100%;
+}
+
+/**
+ *  Colors of bars
+ */
+.faceplate-barchart-bar.faceplate-barchart-bar-color-red { fill: var(--faceplate-color-red); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-orange { fill: var(--faceplate-color-orange); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-white { fill: var(--faceplate-color-white); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-yellow { fill: var(--faceplate-color-yellow); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-lime { fill: var(--faceplate-color-lime); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-green { fill: var(--faceplate-color-green); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-blue { fill: var(--faceplate-color-blue); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-navy { fill: var(--faceplate-color-navy); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-black { fill: var(--faceplate-color-black); }
+.faceplate-barchart-bar.faceplate-barchart-bar-color-gray { fill: var(--faceplate-color-gray); }
+
+.faceplate-barchart-group-border
+{
+    stroke: var(--faceplate-controls-font-color);
+    stroke-width: 1px;
+    opacity: 0.6;
+}
+
+.faceplate-barchart-label,
+.faceplate-barchart-group-label
+{
+    font-size: 0.6em;
+    opacity: 0.6;
+    fill: var(--faceplate-controls-font-color);
+}
