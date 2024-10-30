@@ -11,7 +11,7 @@
 {
     display: grid;
     grid-auto-flow: row; 
-    grid-template-columns: max-content;
+    /* grid-template-columns: max-content; */
     
     gap: 4px;
 }
@@ -61,3 +61,8 @@
 .faceplate-tabs-tab.faceplate-tabs-tab-color-navy { --faceplate-tab-color: var(--faceplate-color-navy); }
 .faceplate-tabs-tab.faceplate-tabs-tab-color-black { --faceplate-tab-color: var(--faceplate-color-black); }
 .faceplate-tabs-tab.faceplate-tabs-tab-color-gray { --faceplate-tab-color: var(--faceplate-color-gray); }
+
+.faceplate-screenbox .faceplate-tabs-tab
+{
+    background-color: rgba(128, 128, 128, 0.25);
+}
