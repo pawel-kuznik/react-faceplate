@@ -33,11 +33,6 @@ export interface TabsProps {
     tabs: TabConfig[];
 
     /**
-     *  
-     */
-    mounted?: boolean;
-
-    /**
      *  Should the tabs be in horizontal or vertical layout?
      */
     layout?: "horizontal" | "vertical";
@@ -82,14 +77,13 @@ export function Tabs({ tabs, onTabChange, layout = "horizontal", selectOverrides
                 const size = (selectOverrides?.size && choosen) ? selectOverrides.size : config.size;
                 const color= (selectOverrides?.color && choosen) ? selectOverrides.color : config.color;
                 const pattern = (selectOverrides?.pattern && choosen) ? selectOverrides.pattern : config.pattern;
-                const label = (selectOverrides?.label && choosen) ? selectOverrides.label : config.label;
 
                 return (<Tab
                     key={idx}
                     size={size}
                     color={color}
                     pattern={pattern}
-                    label={label}
+                    label={config.label}
                     index={idx}
                     selected={choosen}
                     onSelected={handleSelected}
