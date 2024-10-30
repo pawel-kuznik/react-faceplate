@@ -18,13 +18,46 @@
 
 .faceplate-tabs-tab
 {
-    background: var(--faceplate-controls-font-bg);
     color: var(--faceplate-controls-font-color);
     border: var(--faceplate-border);
+    border-color: var(--faceplate-tab-color);
+    border-width: 1px;
+    border-right-width: 4px;
+    border-left-width: 4px;
     padding: 4px;
+
+    transition: border-color .2s, background .2s;
+}
+
+.faceplate-tabs-tab:not([class*='faceplate-pattern-'])
+{
+    /* Cause when there is a pattern applied it needs the background property */
+    background: var(--faceplate-controls-font-bg);
+}
+
+.faceplate-tabs-tab:first-child
+{
+    clip-path: polygon(
+        4px 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 4px
+    );
 }
 
 .faceplate-tabs-tab.faceplate-tabs-tab-selected
 {
     font-weight: bold;
 }
+
+.faceplate-tabs-tab.faceplate-tabs-tab-color-red { --faceplate-tab-color: var(--faceplate-color-red); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-orange { --faceplate-tab-color: var(--faceplate-color-orange); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-white { --faceplate-tab-color: var(--faceplate-color-white); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-yellow { --faceplate-tab-color: var(--faceplate-color-yellow); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-lime { --faceplate-tab-color: var(--faceplate-color-lime); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-green { --faceplate-tab-color: var(--faceplate-color-green); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-blue { --faceplate-tab-color: var(--faceplate-color-blue); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-navy { --faceplate-tab-color: var(--faceplate-color-navy); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-black { --faceplate-tab-color: var(--faceplate-color-black); }
+.faceplate-tabs-tab.faceplate-tabs-tab-color-gray { --faceplate-tab-color: var(--faceplate-color-gray); }

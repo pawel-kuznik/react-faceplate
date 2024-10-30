@@ -3,4 +3,5 @@
  *  should offer.
  */
 export type Pattern = 
-    "polka";
+    "polka"
+    | "stripes";

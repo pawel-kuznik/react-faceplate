@@ -1,11 +1,26 @@
 :root {
 
-    --faceplate-pattern-color: rgba(255, 0,0, .2);
+    --faceplate-pattern-color: rgba(128, 128, 128, .25);
 }
 
 .faceplate-pattern-polka 
 {
     background-color: var(--faceplate-controls-font-bg);
     background-image: radial-gradient(var(--faceplate-pattern-color) 1px, transparent 1px);
+    background-size: var(--faceplate-pattern-size, 8px) var(--faceplate-pattern-size, 8px);
+}
+
+.faceplate-pattern-stripes
+{
+    background-color: var(--faceplate-controls-font-bg);
+    background-image: linear-gradient(45deg, 
+        var(--faceplate-pattern-color) 25%,
+        rgba(128, 128, 128, 0) 25%,
+        rgba(128, 128, 128, 0) 50%,
+        var(--faceplate-pattern-color) 50%,
+        var(--faceplate-pattern-color) 75%,
+        rgba(128, 128, 128, 0) 75%,
+        rgba(128, 128, 128, 0) 100%
+    );
     background-size: var(--faceplate-pattern-size, 8px) var(--faceplate-pattern-size, 8px);
 }

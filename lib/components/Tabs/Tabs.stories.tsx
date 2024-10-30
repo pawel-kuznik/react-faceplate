@@ -10,6 +10,10 @@ type Story = StoryObj<typeof Tabs>;
 
 export const Horizontal: Story = {
   args: {
+    selectOverrides: {
+      pattern: "stripes",
+      color: "green"
+    },
     tabs: [
         { label: "Tab 1" },
         { label: "Tab 2" },
