@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Page } from './Page';
 import { PageHeader } from '../PageHeader';
 import { Button } from '../Button';
+import { PageTitle } from '../PageTitle';
 
 export default {
   title: 'components/Page',
@@ -47,6 +48,18 @@ export const WithHeader: Story = {
     children: (
       <>
         <PageHeader title="Page title" rightControls={(<Button label="Button"/>)} borders/>
+        {sampleText}
+      </>
+    )
+  }
+};
+
+export const WithTitle: Story = {
+  args: {
+    width: "800px",
+    children: (
+      <>
+        <PageTitle title="Page title" rightControls={(<Button label="Button"/>)}/>
         {sampleText}
       </>
     )

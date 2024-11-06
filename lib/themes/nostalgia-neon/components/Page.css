@@ -7,10 +7,20 @@
 
     background: var(--faceplate-controls-font-bg);
 
+    width: 100%;
     min-height: 100%;
+
+    height: 100%;
+
+    box-sizing: border-box;
 }
 
-.faceplate-page-centered
+.faceplate-page-content
+{
+    width: 100%;
+}
+
+.faceplate-page-centered .faceplate-page-content
 {
     margin-left: auto;
     margin-right: auto;

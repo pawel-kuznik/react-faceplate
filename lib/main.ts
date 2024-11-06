@@ -18,6 +18,7 @@ export * from "./components/Input";
 export * from "./components/Modal";
 export * from "./components/Page";
 export * from "./components/PageHeader";
+export * from "./components/PageTitle";
 export * from "./components/Placeholder";
 export * from "./components/ProgressBar";
 export * from "./components/ScreenBox";

@@ -22,6 +22,22 @@
 }
 
 /**
+ *  Ensure slight animation handling.
+ */
+.faceplate-datatable tr td
+{
+    transition: background .2s;
+}
+
+/**
+ *  Hovering over a row should highlight it.
+ */
+.faceplate-datatable tr:hover td
+{
+    background: rgba(200, 200, 200, 0.1);
+}
+
+/**
  *  Make the header solid.
  */
 .faceplate-datatable th

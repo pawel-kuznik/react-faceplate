@@ -17,6 +17,16 @@
 .faceplate-barchart-bar.faceplate-barchart-bar-color-black { fill: var(--faceplate-color-black); }
 .faceplate-barchart-bar.faceplate-barchart-bar-color-gray { fill: var(--faceplate-color-gray); }
 
+.faceplate-barchart-bar
+{
+    transition: opacity .2s;
+}
+
+.faceplate-barchart-bar:hover
+{
+    opacity: 0.9;
+}
+
 .faceplate-barchart-group-border
 {
     stroke: var(--faceplate-controls-font-color);

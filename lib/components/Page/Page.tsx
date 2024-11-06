@@ -25,8 +25,10 @@ export function Page({ centered, width = "auto", children }: PageProps) {
     if (centered) css.push("faceplate-page-centered");
 
     return (
-        <div className={css.join(" ")} style={{ width: width }}>
-            {children}
+        <div className={css.join(" ")}>
+            <div className="faceplate-page-content" style={{ width: `calc(${width} - 2rem)` }}>
+                {children}
+            </div>
         </div>
     );
 };

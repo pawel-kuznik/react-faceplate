@@ -1,0 +1,40 @@
+.faceplate-pagetitle
+{
+    background: var(--faceplate-pagetile-background, var(--faceplate-color-gray));
+    color: var(--faceplate-pagetitle-font-color, var(--faceplate-color-white));   
+}
+
+.faceplate-pagetitle:has(.faceplate-pagetitle-leftcontrols)
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.faceplate-pagetitle:has(.faceplate-pagetitle-rightcontrols)
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.faceplate-pagetitle:has(.faceplate-pagetitle-leftcontrols):has(.faceplate-pagetitle-rightcontrols)
+{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.faceplate-pagetitle-title,
+.faceplate-pagetitle-leftcontrols,
+.faceplate-pagetitle-rightcontrols
+{
+    padding: 4px;
+    padding-top: 8px;   
+}
+
+.faceplate-pagetitle-title
+{
+    font-size: 2em;
+    font-weight: bold;
+}

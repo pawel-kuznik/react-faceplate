@@ -17,7 +17,12 @@
  */
 .faceplate-contentbox:has(.faceplate-contentbox-label)
 {
-    margin-top: 30px;
+    margin-top: 36px;
+}
+
+.faceplate-contentbox:has(.faceplate-contentbox-label):first-child
+{
+    margin-top: 20px;
 }
 
 /**
@@ -26,11 +31,11 @@
 .faceplate-contentbox-label
 {
     position: absolute;
-    height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
-    top: calc(-1 * (var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing)) - 8px);
+    height: calc(var(--faceplate-controls-line-height) + 4px);
+    top: calc(-1 * (var(--faceplate-controls-line-height) + 2px + 4px));
+    padding-top: 1px;
+    padding-bottom: 1px;
     left: -2px;
-    padding-top: var(--faceplate-control-spacing);
-    padding-bottom: var(--faceplate-control-spacing);
     padding-left: calc(var(--faceplate-control-spacing) + 2px);
     padding-right: 16px;
     letter-spacing: 0.25px;
@@ -53,8 +58,8 @@
  */
 .faceplate-contentbox-label:has(.faceplate-editableheading)
 {
-    height: 24px;
-    top: calc(-24px - 2px - 4px - 4px);
+    height: 20px;
+    top: calc(-14px - 2px - 4px - 4px);
     padding-left: 2px;
 }
 
@@ -92,11 +97,9 @@
 .faceplate-contentbox-toptoolbar
 {
     position: absolute;
-    top: calc(-1 * (var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing)) - 8px);
+    top: calc(-1 * (var(--faceplate-controls-line-height)) - 8px);
     right: -2px;
     height: calc(var(--faceplate-controls-line-height) + 2* var(--faceplate-control-spacing));
-    padding-top: var(--faceplate-control-spacing);
-    padding-bottom: var(--faceplate-control-spacing);
     padding-left: 18px;
     padding-right: 6px;
     clip-path: polygon(
@@ -108,6 +111,11 @@
     background: var(--faceplate-controls-font-color);
     background: var(--faceplate-controls-font-color);
     color: var(--faceplate-controls-font-bg);
+}
+
+.faceplate-contentbox-content:empty
+{
+    background: var(--faceplate-controls-font-color);
 }
 
 .faceplate-contentbox:has(> .faceplate-contentbox-content > .faceplate-datatable:first-child) 
@@ -144,7 +152,13 @@
     background: transparent;
 }
 
-.faceplate-screenbox .faceplate-contentbox-content
+.faceplate-screenbox .faceplate-contentbox
 {
     background: rgba(128, 128, 128, 0.25);
+}
+
+.faceplate-contentbox-content p
+{
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }

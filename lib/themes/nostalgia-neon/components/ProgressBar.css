@@ -4,6 +4,9 @@
     border: var(--faceplate-border);
     padding: 1px;
 
+    display: grid;
+    align-items: center;
+
     position: relative;
 }
 
@@ -12,16 +15,22 @@
     height: 100%;
     background: var(--faceplate-progressbar-accent, var(--faceplate-border-color));
 
-    transition: width .2s;
+    transition: width .2s, opacity .2s;
+}
+
+.faceplate-progressbar:hover .faceplate-progressbar-bar
+{
+    opacity: 0.9;
 }
 
 .faceplate-progressbar-content
 {
     position: absolute;
-    top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
+
+    top: 50%;
+    transform: translateY(-50%);
 
     padding: 1px;
     padding-left: 0.5em;
@@ -71,4 +80,9 @@
 
     border-right-width: 2px;
     border-left-width: 2px;
+}
+
+.faceplate-datatable > tbody > tr > td:first-child > .faceplate-progressbar
+{
+    left: 0px;
 }
