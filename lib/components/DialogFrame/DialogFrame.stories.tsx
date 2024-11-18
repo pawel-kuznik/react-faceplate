@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { DialogFrame } from './DialogFrame';
 import { DataTable } from '../DataTable';
+import { ReactNode } from 'react';
 
 export default {
   title: 'components/DialogFrame',
@@ -9,9 +10,21 @@ export default {
 
 type Story = StoryObj<typeof DialogFrame>;
 
+interface SpaceProps {
+  children: ReactNode;
+};
+
+function Space({ children }: SpaceProps) {
+  return (<div style={{ width: '1200px', height: '600px' }}>{children}</div>)
+};
+
 export const DefaultNormal: Story = {
+  decorators: [
+    (Story, props) => <Space><Story {...props}/></Space>
+  ],
   args: {
     title: "Dialog title",
+    onClose: () => { alert("Close dialog") },
     children: (
       <>
         <p>
@@ -35,6 +48,9 @@ export const DefaultNormal: Story = {
 };
 
 export const FixedSize: Story = {
+  decorators: [
+    (Story, props) => <Space><Story {...props}/></Space>
+  ],
   args: {
     width: 400,
     title: "Dialog title",
@@ -61,11 +77,16 @@ export const FixedSize: Story = {
 };
 
 export const MovedSize: Story = {
+  decorators: [
+    (Story, props) => <Space><Story {...props}/></Space>
+  ],
   args: {
     width: 400,
     leftOffset: 200,
     topOffset: 100,
     title: "Dialog title",
+    onClose: () => { alert("close") },
+    movable: true,
     children: (
       <>
         <p>
