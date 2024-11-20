@@ -49,21 +49,28 @@ export function ModalRoot({ children } : ModalRootProps) {
 
     const close = (id: string) => {
 
-        const modal = modals.find(v => v[0] === id);
+        const modal = modalsRef.current.find(v => v[0] === id);
         if (!modal) return;
 
-        setModals(modals.filter(v => v[0] !== id));
+        const newModals: ModalStackList = modalsRef.current = modalsRef.current.filter(v => v[0] !== id);
+
+        setModals(newModals);
     };
 
     const touch = (id: string) => {
         
-        const modalIdx = modals.findIndex(v => v[0] === id);
+        const modalIdx = modalsRef.current.findIndex(v => v[0] === id);
         if (modalIdx === -1) return;
 
-        const modal = modals.splice(modalIdx, 1);
+        const modal = modalsRef.current.splice(modalIdx, 1);
         if (!modal || modal.length === 0) return;
 
-        setModals([...modals, modal[0]]);
+        const newModals: ModalStackList = modalsRef.current = [
+            ...modalsRef.current,
+            modal[0]
+        ];
+
+        setModals(newModals);
     };
 
     const controls = {
@@ -83,14 +90,16 @@ export function ModalRoot({ children } : ModalRootProps) {
                     const params = d[2];
 
                     const handleClose = () => {
-
-                        const filtered = modalsRef.current = modalsRef.current.filter(d => d[0] !== id);
-                        setModals(filtered);
-
+                        close(id);
                         if ('onClose' in params && typeof(params.onClose) === "function") params.onClose(); 
                     };
 
-                    return <Component key={`${id}`} {...params} onClose={handleClose} />;
+                    const handleTouch = () => {
+                        touch(id);
+                        if ('onTouch' in params && typeof(params.onTouch) === "function") params.onTouch();
+                    };
+
+                    return <Component key={`${id}`} {...params} onClose={handleClose} onTouch={handleTouch} />;
                 })}
             </ModalRootControlsContext.Provider>
         </ModalRootContext.Provider>

@@ -48,6 +48,11 @@ export interface DialogFrameProps {
     onClose?: () => void;
 
     /**
+     *  A callback to call when user interacts with the dialog.
+     */
+    onTouch?: () => void;
+
+    /**
      *  The children of the dialog.
      */
     children?: ReactNode;
@@ -57,7 +62,7 @@ export interface DialogFrameProps {
  *  This component is a frame around a dialog element. The content of the dialog
  *  can be anything.
  */
-export function DialogFrame({ width = "auto", height = "auto", maxHeight = "auto", movable = false, topOffset = 0, leftOffset = 0, title, onClose, children }: DialogFrameProps) {
+export function DialogFrame({ width = "auto", height = "auto", maxHeight = "auto", movable = false, topOffset = 0, leftOffset = 0, title, onClose, onTouch, children }: DialogFrameProps) {
 
     const styles = {
         width: typeof(width) === "number" ? `${width}px` : width,
@@ -123,11 +128,16 @@ export function DialogFrame({ width = "auto", height = "auto", maxHeight = "auto
         element.addEventListener("pointercancel", handleGrabCancel);
     };
 
+    const handleClick = () => {
+        onTouch?.();
+    };
+
     return (
         <div
             ref={frameRef}
             className="faceplate-dialogframe"
             style={styles}
+            onClick={handleClick}
         >
             <div ref={titleRef} className="faceplate-dialogframe-title">
                 {title}

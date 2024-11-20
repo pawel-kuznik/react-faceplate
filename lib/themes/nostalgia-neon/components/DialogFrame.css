@@ -17,12 +17,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
-
-    /**
-     *  When the dialog frame shows up we want to play a slight animation.
-     */
-    animation-name: faceplate-dialogframe-appear;
-    animation-duration: 400ms;
 }
 
 .faceplate-dialogframe-title
