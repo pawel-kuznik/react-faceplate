@@ -18,6 +18,9 @@
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
 
+    /**
+     *  When the dialog frame shows up we want to play a slight animation.
+     */
     animation-name: faceplate-dialogframe-appear;
     animation-duration: 400ms;
 }
@@ -45,12 +48,12 @@
     grid-auto-rows: 24px;
     align-items: center;
     justify-items: center;
-    row-gap: 4px;
+    row-gap: var(--faceplate-layout-spacing);
     position: absolute;
     left: -36px;
     top: -2px;
     width: 28px;
-    padding: 4px;
+    padding: var(--faceplate-layout-spacing);
     padding-bottom: 32px;
     background: var(--faceplate-controls-font-color);
     color: var(--faceplate-controls-font-bg);
@@ -66,7 +69,7 @@
 .faceplate-dialogframe-content
 {
     grid-column: span 2;
-    padding: 4px;
+    padding: var(--faceplate-layout-spacing);
 }
 
 .faceplate-dialogframe-close

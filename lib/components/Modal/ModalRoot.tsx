@@ -33,27 +33,50 @@ export function ModalRoot({ children } : ModalRootProps) {
     const modalsRef = useRef<ModalStackList>([]);
     const [ modals, setModals ] = useState<ModalStackList>(modalsRef.current);
 
+    const show = (id: string, Component: FunctionComponent, params: any) => {
+
+        // if a modal with given id is already in the modal stack, then we don't
+        // want to create a new one.
+        if (modalsRef.current.findIndex(d => d[0] === id) !== -1) return touch(id);
+
+        const newModals: ModalStackList = modalsRef.current = [
+            ...modalsRef.current,
+            [ id, Component, params ]
+        ];
+
+        setModals(newModals);
+    };
+
+    const close = (id: string) => {
+
+        const modal = modals.find(v => v[0] === id);
+        if (!modal) return;
+
+        setModals(modals.filter(v => v[0] !== id));
+    };
+
+    const touch = (id: string) => {
+        
+        const modalIdx = modals.findIndex(v => v[0] === id);
+        if (modalIdx === -1) return;
+
+        const modal = modals.splice(modalIdx, 1);
+        if (!modal || modal.length === 0) return;
+
+        setModals([...modals, modal[0]]);
+    };
+
     const controls = {
-        show: (id: string, Component: FunctionComponent, params: any) => {
-
-            // if a modal with given id is already in the modal stack, then we don't
-            // want to create a new one.
-            if (modalsRef.current.findIndex(d => d[0] === id) !== -1) return;
-
-            const newModals: ModalStackList = modalsRef.current = [
-                ...modalsRef.current,
-                [ id, Component, params ]
-            ];
-
-            setModals(newModals);
-        }
+        show,
+        close,
+        touch
     };
 
     return (
         <ModalRootContext.Provider value={modals}>
             <ModalRootControlsContext.Provider value={controls}>
                 {children}
-                {modals.map((d, k) => {
+                {modals.map((d) => {
 
                     const id = d[0];
                     const Component = d[1];
@@ -67,7 +90,7 @@ export function ModalRoot({ children } : ModalRootProps) {
                         if ('onClose' in params && typeof(params.onClose) === "function") params.onClose(); 
                     };
 
-                    return <Component key={`${id}-${k}`} {...params} onClose={handleClose} />;
+                    return <Component key={`${id}`} {...params} onClose={handleClose} />;
                 })}
             </ModalRootControlsContext.Provider>
         </ModalRootContext.Provider>

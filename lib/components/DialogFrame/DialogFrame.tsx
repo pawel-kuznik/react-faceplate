@@ -35,9 +35,11 @@ export interface DialogFrameProps {
     topOffset?: number;
 
     /**
-     *  The title of the dialog.
+     *  The title of the dialog. In general it should be a string, but it's
+     *  possible to pass a react node. Such react node should contain inline
+     *  elements and behave like regular text.
      */
-    title: string;
+    title: string | ReactNode;
 
     /**
      *  A callback to call when user wants to close the dialog. If the callback

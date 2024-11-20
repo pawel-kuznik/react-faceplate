@@ -1,6 +1,12 @@
 :root
 {
-    --faceplate-control-spacing: 4px;
-    --grid-row-gap: 4px;
-    --grid-column-gap: 4px;
+    /*
+     *  A general spacing to be used between layout elements. 
+     */
+    --faceplate-layout-spacing: 4px;
+
+
+    --faceplate-control-spacing: var(--faceplate-layout-spacing);
+    --grid-row-gap: var(--faceplate-layout-spacing);
+    --grid-column-gap: var(--faceplate-layout-spacing);
 }
