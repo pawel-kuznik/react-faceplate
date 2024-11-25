@@ -28,5 +28,6 @@ export * from "./components/StatsList";
 export * from "./components/Tabs";
 export * from "./components/TabsFrame";
 export * from "./components/TextArea";
+export * from "./components/TreeChart";
 
 export * from "./utils/extractFormData";
