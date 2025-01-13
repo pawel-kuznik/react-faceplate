@@ -15,7 +15,8 @@ export interface InputProps {
     /**
      *  Type of the input.
      */
-    type?: "number" | "text" ;
+    type?: "number" | "text" | "date" | "datetime-local" | "email" | "month" | "password" | 
+    "search" | "tel" | "time" | "url" | "week" | "datetime" ;
 
     /**
      *  The minimal value. It makes only sense for "number" inputs.

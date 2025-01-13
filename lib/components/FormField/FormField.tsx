@@ -38,7 +38,8 @@ export interface FormFieldProps {
     /**
      *  Type of the input.
      */
-    type?: "number" | "text" | "select" | "textarea";
+    type?: "number" | "text" | "select" | "textarea" | "date" | "datetime-local" | "email" | "month" | "password" | 
+    "search" | "tel" | "time" | "url" | "week" | "datetime";
 
     /**
      *  The options of the input. This is only applicable for "select" inputs.
