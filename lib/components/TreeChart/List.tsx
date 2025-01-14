@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Children, ReactNode } from "react";
 import { Node } from "./Node"
 
 export interface ListProps {
@@ -31,10 +31,20 @@ export interface ListProps {
  */
 export function List({ node, x, y, children }: ListProps) {
 
+    const adjustedChildren = Children.map(children, (child, index: number) => {
+
+        if (typeof(child) === "object" && child !== null && ("props" in child)) {
+        
+            return child;
+        }
+
+        return child;
+    });
+
     return (
         <g className="faceplate-treechart-list" transform={`translate(${x}, ${y})`}>
             <Node x={0} y={0}> 
-                {node}
+                {adjustedChildren}
             </Node> 
         </g>
     );
