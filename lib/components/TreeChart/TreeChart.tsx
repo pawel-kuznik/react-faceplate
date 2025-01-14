@@ -1,9 +1,19 @@
 import { PropsWithChildren } from "react";
 import { Group } from "./Group";
 import { Node } from "./Node";
+import { List } from "./List";
 
 export interface TreeChartProps extends PropsWithChildren {
 
+    /**
+     *  The CSS width of the chart.
+     */
+    width?: number | string;
+
+    /**
+     *  The CSS height of the chart. 
+     */
+    height?: number | string;
 };
 
 /**
@@ -11,10 +21,10 @@ export interface TreeChartProps extends PropsWithChildren {
  *  that can have sub-nodes (and so on). Each node can be assigned a label that
  *  renders the actual node.
  */
-function TreeChart({ children }: TreeChartProps) {
+function TreeChart({ width, height, children }: TreeChartProps) {
 
     return (
-        <svg>
+        <svg width={width} height={height} className="faceplate-treechart">
             {children}
         </svg>
     );
@@ -23,5 +33,6 @@ function TreeChart({ children }: TreeChartProps) {
 // export sub components
 TreeChart.Group = Group;
 TreeChart.Node = Node;
+TreeChart.List = List;
 
 export { TreeChart };
