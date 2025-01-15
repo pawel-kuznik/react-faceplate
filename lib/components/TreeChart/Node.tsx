@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 export interface NodeProps {
 
@@ -26,6 +26,11 @@ export interface NodeProps {
      * The content to render inside the node.
      */
     children: ReactNode;
+
+    /**
+     *  An optional callback to call when the node resizes for some reason.
+     */
+    onResize?: (width: number, height: number, x: number, y: number) => void;
 };
 
 /**
@@ -34,7 +39,7 @@ export interface NodeProps {
  *  doesn't come with presentation styles and only offers a space
  *  to render.
  */
-export function Node({ x = 0, y = 0, width = 100, height = 20, children }: NodeProps) {
+export function Node({ x = 0, y = 0, width = 100, height = 20, onResize, children }: NodeProps) {
 
     const content = (() => {
 
@@ -54,6 +59,10 @@ export function Node({ x = 0, y = 0, width = 100, height = 20, children }: NodeP
 
         return children;
     })();
+
+    useEffect(() => {
+        onResize?.(width, height, x, y);
+    }, [ width, height, x, y ]);
 
     return (
         <g className="faceplate-treechart-node" transform={`translate(${x}, ${y + height})`}>

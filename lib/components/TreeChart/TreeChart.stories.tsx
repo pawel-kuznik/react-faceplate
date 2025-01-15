@@ -10,11 +10,9 @@ type Story = StoryObj<typeof TreeChart>;
 
 export const DefaultNormal: Story = {
   args: {
-    width: 1000,
-    height: 1000,
     children: (
         <TreeChart.Group node="Parent">
-            <TreeChart.Node>
+            <TreeChart.Node width={300}>
                 <a href="#/hello">Hello</a>
             </TreeChart.Node>
             <TreeChart.Group node="Child 2">
@@ -24,6 +22,15 @@ export const DefaultNormal: Story = {
                 </TreeChart.Node>
                 <TreeChart.Node>
                   Child 2.1.2
+                </TreeChart.Node>
+                <TreeChart.Node>
+                  Child 2.1.3
+                </TreeChart.Node>
+                <TreeChart.Node>
+                  Child 2.1.4
+                </TreeChart.Node>
+                <TreeChart.Node>
+                  Child 2.1.5
                 </TreeChart.Node>
               </TreeChart.List>
               <TreeChart.Group node="Child 2.2">
@@ -38,8 +45,11 @@ export const DefaultNormal: Story = {
                 Child 2.3 TEST
               </TreeChart.Node>
             </TreeChart.Group>
-            <TreeChart.Node>
+            <TreeChart.Node width={200}>
                 Child 3
+            </TreeChart.Node>
+            <TreeChart.Node>
+                Child 4
             </TreeChart.Node>
         </TreeChart.Group>
     )

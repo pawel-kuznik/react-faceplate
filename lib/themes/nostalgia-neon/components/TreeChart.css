@@ -3,7 +3,8 @@
     stroke: black;
 }
 
-.faceplate-treechart-branch
+.faceplate-treechart-branch,
+.faceplate-treechart-list
 {
     stroke: black;
 }
