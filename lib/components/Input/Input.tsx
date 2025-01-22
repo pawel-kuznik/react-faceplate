@@ -39,7 +39,8 @@ export interface InputProps {
     defaultValue?: string | number;
 
     /** 
-     *  A mutable ref to the input value.
+     *  A mutable ref to the input value. The reference is updated when the input changes
+     *  and when the underlying element is blurred.
      */
     valueRef?: MutableRefObject<string>;
 

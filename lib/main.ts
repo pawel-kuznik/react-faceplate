@@ -14,6 +14,7 @@ export * from "./components/FormFieldLine";
 export * from "./components/FormGroup";
 export * from "./components/Grid";
 export * from "./components/ImageBox";
+export * from "./components/InlineForm";
 export * from "./components/Input";
 export * from "./components/Modal";
 export * from "./components/Page";

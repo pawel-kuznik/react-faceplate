@@ -1,0 +1,11 @@
+.faceplate-inlineform
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+}
+
+.faceplate-inlineform > .faceplate-input
+{
+    flex-grow: 1;
+}

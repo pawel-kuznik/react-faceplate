@@ -1,8 +1,8 @@
 import { FormEvent, ReactNode } from "react";
 import { extractFormData } from "../../utils/extractFormData";
 
-export interface BasicFormProps {
-
+export interface InlineFormProps {
+    
     /**
      *  Handle submit on the form. The data object is a key-value store
      *  of all inputs inside the form.
@@ -19,13 +19,14 @@ export interface BasicFormProps {
      *  The children inside the form.
      */
     children?: ReactNode;
-};
+}
 
 /**
- *  This is a component that should be used when a simple form should be shown.
- *  The component offers an easy way to handle submit and changes in the form.
+ *  This is a component that can be used to display a form in a single line.
+ *  The main use case for it is to server as search bar forms, inline create
+ *  forms, etc.
  */
-export function BasicForm({ children, onSubmit, onChange }: BasicFormProps) {
+export function InlineForm({ onSubmit, onChange, children }: InlineFormProps) {
 
     const processFormEvent = (event: FormEvent) : object => {
 
@@ -46,12 +47,16 @@ export function BasicForm({ children, onSubmit, onChange }: BasicFormProps) {
         if (!onSubmit) return;
 
         event.preventDefault();
-        
+
         onSubmit(processFormEvent(event));
     };
 
     return (
-        <form onSubmit={handleSubmit} onChange={handleChange}>
+        <form
+            className="faceplate-inlineform"
+            onSubmit={handleSubmit}
+            onChange={handleChange}
+        >
             {children}
         </form>
     );

@@ -35,6 +35,10 @@ export interface GroupProps extends PropsWithChildren {
     onResize?: (width: number, height: number, x: number, y: number) => void;
 };
 
+/**
+ *  A group in the tree is a horizontal layout of nodes that creates
+ *  a branch of the tree.
+ */
 export function Group({
     x = 0,
     y = 0,
