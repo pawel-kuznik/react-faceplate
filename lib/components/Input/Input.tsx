@@ -61,7 +61,7 @@ export interface InputProps {
  *  can be simplified. For example, the onChange() provides changed value instead 
  *  of instance of change event. In most cases this is perfectly fine.
  */
-export function Input({ name, list, readonly, type, min, max, defaultValue, valueRef, onChange, onBlur } : InputProps) {
+export function Input({ name, list, readonly, type = "text", min, max, defaultValue, valueRef, onChange, onBlur } : InputProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
