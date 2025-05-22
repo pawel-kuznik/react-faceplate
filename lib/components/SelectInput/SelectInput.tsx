@@ -30,6 +30,12 @@ export interface SelectInputProps {
     defaultValue?: string;
 
     /**
+     *  The placeholder text of the input. The placeholder text is displayed when
+     *  the input is empty.
+     */
+    placeholder?: string;
+
+    /**
      *  A mutable reference to the value.
      */
     valueRef?: MutableRefObject<string>;
@@ -50,7 +56,7 @@ export interface SelectInputProps {
  *  Input component, this component exists to simplify select element handling
  *  and integrate it with the rest of the library. 
  */
-export function SelectInput({ name, options, labels, titles, onChange, onBlur, defaultValue, valueRef }: SelectInputProps) {
+export function SelectInput({ name, options, labels, titles, onChange, onBlur, defaultValue, valueRef, placeholder }: SelectInputProps) {
 
     const inputRef = useRef<HTMLSelectElement|null>(null);
 
@@ -85,9 +91,17 @@ export function SelectInput({ name, options, labels, titles, onChange, onBlur, d
     })();
     
     return (
-        <select className="faceplate-selectinput" ref={inputRef} onChange={handleChange} onBlur={handleBlur} name={name} defaultValue={defaultValue || valueRef?.current} title={title}>
+        <select
+            className="faceplate-selectinput"
+            ref={inputRef}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            name={name}
+            defaultValue={defaultValue || valueRef?.current || (placeholder && "")}
+            title={title}
+        >
+            <option value="" disabled hidden>{placeholder}</option>
             {options.map((o, k) => {
-
                 const label = typeof (labels) === "function" ? labels(o) : labels[k];
                 return (<option key={o} value={o} title={generateTitle(o, k)}>{label}</option>)
             })}

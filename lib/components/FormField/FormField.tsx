@@ -81,6 +81,12 @@ export interface FormFieldProps {
     defaultValue?: string | number;
 
     /**
+     *  The placeholder text of the input. The placeholder text is displayed when
+     *  the input is empty.
+     */
+    placeholder?: string;
+
+    /**
      *  A mutable reference to the value.
      */
     valueRef?: MutableRefObject<string>;
@@ -96,7 +102,7 @@ export interface FormFieldProps {
     onBlur?: (value: string) => void;
 };
 
-export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, rows, defaultValue, valueRef, onChange, onBlur }: FormFieldProps) {
+export function FormField({ layout = "column", description, label, name, type, min, max, list, options, labels, titles, rows, defaultValue, placeholder, valueRef, onChange, onBlur }: FormFieldProps) {
 
     // the params that are safe to pass to an of the input types.
     const inputArgs: any = {
@@ -111,7 +117,8 @@ export function FormField({ layout = "column", description, label, name, type, m
         rows,
         valueRef,
         onChange,
-        onBlur
+        onBlur,
+        placeholder
     };
 
     // only pass default value when there is a defined value

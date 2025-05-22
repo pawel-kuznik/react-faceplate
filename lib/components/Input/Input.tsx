@@ -38,6 +38,12 @@ export interface InputProps {
      */
     defaultValue?: string | number;
 
+    /**
+     *  The placeholder text of the input. The placeholder text is displayed when
+     *  the input is empty.
+     */
+    placeholder?: string;
+
     /** 
      *  A mutable ref to the input value. The reference is updated when the input changes
      *  and when the underlying element is blurred.
@@ -61,7 +67,7 @@ export interface InputProps {
  *  can be simplified. For example, the onChange() provides changed value instead 
  *  of instance of change event. In most cases this is perfectly fine.
  */
-export function Input({ name, list, readonly, type = "text", min, max, defaultValue, valueRef, onChange, onBlur } : InputProps) {
+export function Input({ name, list, readonly, type = "text", min, max, defaultValue, placeholder, valueRef, onChange, onBlur } : InputProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
@@ -89,6 +95,7 @@ export function Input({ name, list, readonly, type = "text", min, max, defaultVa
             max={max}
             list={list}
             defaultValue={defaultValue || valueRef?.current}
+            placeholder={placeholder}
             onChange={handleChange}
             onBlur={handleBlur}
         />

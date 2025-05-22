@@ -18,6 +18,12 @@ export interface TextAreaProps {
     valueRef?: MutableRefObject<string>;
 
     /**
+     *  The placeholder text of the input. The placeholder text is displayed when
+     *  the input is empty.
+     */
+    placeholder?: string;
+
+    /**
      *  A callback to call when user changed the value. 
      */
     onChange?: (value: string) => void;
@@ -33,13 +39,12 @@ export interface TextAreaProps {
     rows?: number;
 };
 
-
 /**
  *  This is a simplified textarea component. It works largely like the standard
  *  textarea element, but exposes less of HTML API in favour of more streamlined
  *  and easier API.
  */
-export function TextArea({ name, defaultValue, valueRef, onChange, onBlur, rows }: TextAreaProps) {
+export function TextArea({ name, defaultValue, placeholder, valueRef, onChange, onBlur, rows }: TextAreaProps) {
 
     const handleChange = (event: ChangeEvent) => {
 
@@ -64,8 +69,9 @@ export function TextArea({ name, defaultValue, valueRef, onChange, onBlur, rows 
             rows={rows}
             onChange={handleChange}
             onBlur={handleBlur}
+            placeholder={placeholder}
+            defaultValue={defaultValue || valueRef?.current}
         >
-            {defaultValue || valueRef?.current}
         </textarea>
     );
 };
