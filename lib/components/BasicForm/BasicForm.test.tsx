@@ -40,4 +40,37 @@ describe('BasicForm', () => {
 
         expect(getByText('Child Element')).toBeInTheDocument();
     });
+
+    it("should pre-fill the form with initial data (simple input)", () => {
+        const { getByTestId } = render(
+            <BasicForm defaultValues={{ name: 'test' }}>
+                <input name="name" data-testid="input" />
+            </BasicForm>
+        );
+
+        expect((getByTestId('input') as HTMLInputElement).value).toBe('test');
+    })
+
+    it("should pre-fill the form with initial data (select)", () => {
+        const { getByTestId } = render(
+            <BasicForm defaultValues={{ name: 'test' }}>
+                <select name="name" data-testid="select">
+                    <option value="">Select</option>
+                    <option value="test">Test</option>
+                </select>
+            </BasicForm>
+        );
+
+        expect((getByTestId('select') as HTMLInputElement).value).toBe('test');
+    })
+
+    it("should pre-fill the form with initial data (textarea)", () => {
+        const { getByTestId } = render(
+            <BasicForm defaultValues={{ name: 'test' }}>
+                <textarea name="name" data-testid="textarea" />
+            </BasicForm>
+        );
+
+        expect((getByTestId('textarea') as HTMLInputElement).value).toBe('test');
+    })
 });
