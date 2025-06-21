@@ -21,6 +21,8 @@
     grid-template-columns: auto 1fr;
 
     transition: background .4s;
+
+    cursor: pointer;
 }
 
 .faceplate-button.faceplate-button-size-normal:has(.faceplate-button-icon) {
