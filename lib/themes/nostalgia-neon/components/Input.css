@@ -12,6 +12,8 @@
     background-image: var(--faceplate-shading-light);
     background-size: 4px 4px;
     background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+
+    width: var(--faceplate-input-default-width);
 }
 
 .faceplate-input:focus

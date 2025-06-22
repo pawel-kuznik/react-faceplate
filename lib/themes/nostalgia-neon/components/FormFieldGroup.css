@@ -1,0 +1,12 @@
+.faceplate-formfieldgroup
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    column-gap: 10px;
+}
+
+.faceplate-formfieldgroup > .faceplate-formfieldlayout
+{
+    --faceplate-input-default-width: calc(100% - 8px);
+}

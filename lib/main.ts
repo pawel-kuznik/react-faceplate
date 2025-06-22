@@ -9,6 +9,7 @@ export * from "./components/DataTable";
 export * from "./components/DialogFrame";
 export * from "./components/EditableHeading";
 export * from "./components/FormField";
+export * from "./components/FormFieldGroup";
 export * from "./components/FormFieldLayout";
 export * from "./components/FormFieldLine";
 export * from "./components/FormGroup";
