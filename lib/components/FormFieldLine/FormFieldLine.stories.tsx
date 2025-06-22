@@ -11,6 +11,8 @@ type Story = StoryObj<typeof FormFieldLine>;
 
 export const DefaultNormal: Story = {
     args: {
+        label: 'Form field line',
+        description: 'This is a description of the form field line',
         children: (
             <>
                 <Input/>
@@ -24,7 +26,9 @@ export const DefaultNormal: Story = {
 
 export const WithWidths: Story = {
     args: {
-        widths: [ '100px', '100px', 'auto' ],
+        label: 'Form field line',
+        description: 'This is a description of the form field line',
+        widths: [ 'auto', 'auto', 'min-content' ],
         children: (
             <>
                 <Input/>
