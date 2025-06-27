@@ -1,0 +1,11 @@
+.faceplate-descriptiveheader
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faceplate-descriptiveheader-description
+{
+    font-size: 14px;
+}
