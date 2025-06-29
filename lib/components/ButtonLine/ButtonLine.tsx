@@ -8,6 +8,11 @@ export interface ButtonLineProps {
     direction?: "horizontal" | "vertical";
 
     /**
+     *  The alignment of the line.
+     */
+    align?: "start" | "center" | "end";
+
+    /**
      *  The children of the line.
      */
     children?: ReactNode;
@@ -16,11 +21,12 @@ export interface ButtonLineProps {
 /**
  *  A component to distribute buttons in oneline.
  */
-export function ButtonLine({ direction = "horizontal", children }: ButtonLineProps) {
+export function ButtonLine({ direction = "horizontal", align = "start", children }: ButtonLineProps) {
 
     const css = [
         "faceplate-buttonline",
-        `faceplate-buttonline-direction-${direction}`
+        `faceplate-buttonline-direction-${direction}`,
+        `faceplate-buttonline-align-${align}`
     ];
 
     return (

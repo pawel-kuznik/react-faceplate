@@ -1,11 +1,42 @@
 .faceplate-descriptiveheader
 {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 8px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-icon
+{
+    flex-basis: 24px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main
+{
+    flex-grow: 2;
+}
+
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-content
+{
+    flex-grow: 1
+
 }
 
 .faceplate-descriptiveheader-description
 {
     font-size: 14px;
+}
+
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h1,
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h2,
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h3,
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h4,
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h5,
+.faceplate-descriptiveheader > .faceplate-descriptiveheader-main > h6
+{
+    margin: 0;
 }

@@ -16,3 +16,18 @@
     grid-auto-flow: row;
     grid-auto-rows: min-content;
 }
+
+.faceplate-buttonline.faceplate-buttonline-align-start
+{
+    justify-content: center;
+}
+
+.faceplate-buttonline.faceplate-buttonline-align-end
+{
+    justify-content: flex-end;
+}
+
+.faceplate-buttonline.faceplate-buttonline-align-center
+{
+    justify-content: center;
+}

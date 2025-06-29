@@ -31,3 +31,51 @@ export const Vertical: Story = {
         children
     }
 };
+
+export const HorizontalStart: Story = {
+    args: {
+        direction: "horizontal",
+        align: "start",
+        children
+    }
+};
+
+export const HorizontalCenter: Story = {
+    args: {
+        direction: "horizontal",
+        align: "center",
+        children
+    }
+};
+
+export const HorizontalEnd: Story = {
+    args: {
+        direction: "horizontal",
+        align: "end",
+        children
+    }
+};
+
+export const VerticalStart: Story = {
+    args: {
+        direction: "vertical",
+        align: "start",
+        children
+    }
+};
+
+export const VerticalCenter: Story = {
+    args: {
+        direction: "vertical",
+        align: "center",
+        children
+    }
+};
+
+export const VerticalEnd: Story = {
+    args: {
+        direction: "vertical",
+        align: "end",
+        children
+    }
+};

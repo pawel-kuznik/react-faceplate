@@ -35,8 +35,10 @@ export function DescriptiveHeader({ title, level, description, children, icon }:
     return (
         <div className="faceplate-descriptiveheader">
             {icon && <div className="faceplate-descriptiveheader-icon">{icon}</div>}
-            <Heading level={level}>{title}</Heading>
-            {description && <div className="faceplate-descriptiveheader-description">{description}</div>}
+            <div className="faceplate-descriptiveheader-main">
+                <Heading level={level}>{title}</Heading>
+                {description && <div className="faceplate-descriptiveheader-description">{description}</div>}
+            </div>
             <div className="faceplate-descriptiveheader-content">{children}</div>
         </div>
     );
