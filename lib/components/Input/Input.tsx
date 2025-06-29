@@ -69,19 +69,19 @@ export interface InputProps {
  */
 export function Input({ name, list, readonly, type = "text", min, max, defaultValue, placeholder, valueRef, onChange, onBlur } : InputProps) {
 
-    const handleChange = (event: ChangeEvent) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 
-        const value = (event.target as HTMLInputElement).value;
+        const value = event.target.value;
 
         if (valueRef) valueRef.current = value;
         onChange?.(value);
     };
 
-    const handleBlur = (event: ChangeEvent) => {
+    const handleBlur = (event: ChangeEvent<HTMLInputElement>) => {
 
-        const value = (event.target as HTMLInputElement).value;
+        const value = event.target.value;
 
-        if (valueRef) valueRef.current= value;
+        if (valueRef) valueRef.current = value;
         onBlur?.(value);
     };
 
