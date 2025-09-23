@@ -21,4 +21,17 @@ export const SearchForm: Story = {
   }
 };
 
+export const RenameForm: Story = {
+  args: {
+    onInactive: (data: object) => {
+      console.log("rename to", data)
+    },
+    children: (
+        <>
+            <Input type="text" name="text"/>
+        </>
+    )
+  }
+};
+
   

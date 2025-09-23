@@ -10,6 +10,7 @@ export interface TagPickerProps {
 }
 
 export interface TagPickerComponentProps extends TagPickerProps {
+    
     /**
      * The list of available options to pick from.
      */

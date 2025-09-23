@@ -4,16 +4,22 @@ import { extractFormData } from "../../utils/extractFormData";
 export interface BasicFormProps {
 
     /**
-     *  Handle submit on the form. The data object is a key-value store
+     *  Handle submit on the form. The data object is a key-value object
      *  of all inputs inside the form.
      */
     onSubmit?: (data: object) => void;
 
     /**
-     *  Handle change on the form. The data object is a key-value store
+     *  Handle change on the form. The data object is a key-value object
      *  of all inputs inside the form.
      */
     onChange?: (data: object) => void;
+
+    /**
+     *  Handle when the form stops being active. This usually means when all
+     *  inputs are inactive (blurred).
+     */
+    onInactive?: (data: object) => void;
 
     /**
      *  The children inside the form.
@@ -30,7 +36,7 @@ export interface BasicFormProps {
  *  This is a component that should be used when a simple form should be shown.
  *  The component offers an easy way to handle submit and changes in the form.
  */
-export function BasicForm({ children, onSubmit, onChange, defaultValues }: BasicFormProps) {
+export function BasicForm({ children, onSubmit, onChange, onInactive, defaultValues }: BasicFormProps) {
 
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -55,6 +61,13 @@ export function BasicForm({ children, onSubmit, onChange, defaultValues }: Basic
         event.preventDefault();
         
         onSubmit(processFormEvent(event));
+    };
+
+    const handleInactive = (event: FormEvent) => {
+
+        if (!onInactive) return;
+
+        onInactive(processFormEvent(event));
     };
 
     useEffect(() => {
@@ -83,7 +96,12 @@ export function BasicForm({ children, onSubmit, onChange, defaultValues }: Basic
     
 
     return (
-        <form ref={formRef} onSubmit={handleSubmit} onChange={handleChange}>
+        <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            onChange={handleChange}
+            onBlur={handleInactive}
+        >
             {children}
         </form>
     );
