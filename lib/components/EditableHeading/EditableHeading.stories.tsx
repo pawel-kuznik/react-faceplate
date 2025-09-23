@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { EditableHeading } from './EditableHeading';
 
 export default {
-  title: 'components/EditableHeading',
+  title: 'Layouts/EditableHeading',
   component: EditableHeading,
 } as Meta<typeof EditableHeading>;
 

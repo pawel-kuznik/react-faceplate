@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { SelectInput } from './SelectInput';
 
 export default {
-  title: 'components/SelectInput',
+  title: 'Inputs/SelectInput',
   component: SelectInput,
 } as Meta<typeof SelectInput>;
 

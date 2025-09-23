@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Placeholder } from '../Placeholder';
 
 export default {
-  title: 'components/Placeholder',
+  title: 'Layouts/Placeholder',
   component: Placeholder,
 } as Meta<typeof Placeholder>;
 

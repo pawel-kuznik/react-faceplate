@@ -1,0 +1,40 @@
+/* TagList Component Styles */
+
+.faceplate-taglist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.faceplate-taglist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.faceplate-taglist-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1;
+    color: var(--faceplate-color-text-muted);
+    border-radius: 50%;
+}
+
+.faceplate-taglist-remove:hover {
+    background-color: var(--faceplate-color-background-hover);
+    color: var(--faceplate-color-text-default);
+}
+
+.faceplate-taglist-picker {
+    display: flex;
+    align-items: center;
+}

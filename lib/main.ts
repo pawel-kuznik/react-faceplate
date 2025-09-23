@@ -31,6 +31,10 @@ export * from "./components/SideToolbox";
 export * from "./components/StatsList";
 export * from "./components/Tabs";
 export * from "./components/TabsFrame";
+export * from "./components/Tag";
+export * from "./components/TagInput";
+export * from "./components/TagList";
+export * from "./components/TagPicker";
 export * from "./components/TextArea";
 export * from "./components/TreeChart";
 

@@ -5,7 +5,7 @@ import { Button } from '../Button';
 import { PageTitle } from '../PageTitle';
 
 export default {
-  title: 'components/Page',
+  title: 'Layouts/Page',
   component: Page,
 } as Meta<typeof Page>;
 

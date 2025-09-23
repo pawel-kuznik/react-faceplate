@@ -7,7 +7,7 @@ import { ImageBox } from '../ImageBox';
 import { EditableHeading } from '../EditableHeading';
 
 export default {
-    title: 'components/ContentBox',
+    title: 'Layouts/ContentBox',
     component: ContentBox,
 } as Meta<typeof ContentBox>;
 

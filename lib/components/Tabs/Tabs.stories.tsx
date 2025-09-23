@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Tabs } from './Tabs';
 
 export default {
-  title: 'components/Tabs',
+  title: 'Layouts/Tabs',
   component: Tabs,
 } as Meta<typeof Tabs>;
 

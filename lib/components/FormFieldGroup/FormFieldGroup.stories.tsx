@@ -3,7 +3,7 @@ import { FormFieldGroup } from "./FormFieldGroup";
 import { FormField } from "../FormField/FormField";
 
 export default {
-    title: 'components/FormFieldGroup',
+    title: 'Forms/FormFieldGroup',
     component: FormFieldGroup,
 } as Meta<typeof FormFieldGroup>;
 

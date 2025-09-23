@@ -33,5 +33,9 @@
 @import "./components/StatsList.css";
 @import "./components/Tabs.css";
 @import "./components/TabsFrame.css";
+@import "./components/Tag.css";
+@import "./components/TagInput.css";
+@import "./components/TagList.css";
+@import "./components/TagPicker.css";
 @import "./components/TextArea.css";
 @import "./components/TreeChart.css";

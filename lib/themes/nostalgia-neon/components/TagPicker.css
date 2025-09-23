@@ -1,0 +1,7 @@
+/* TagPicker Component Styles */
+
+.faceplate-tagpicker-open {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}

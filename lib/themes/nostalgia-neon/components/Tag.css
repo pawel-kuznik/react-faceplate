@@ -1,0 +1,47 @@
+/* Configuration properties */
+:root {
+    --faceplate-tag-font-size: 0.875rem;
+    --faceplate-tag-line-height: 1.25;
+    --faceplate-tag-border-color: var(--faceplate-border-color);
+    --faceplate-tag-background-color: var(--faceplate-controls-font-bg);
+    --faceplate-tag-text-color: var(--faceplate-controls-font-color);
+}
+
+/* Tag Component Styles */
+
+.faceplate-tag {
+    display: inline-block;
+    font-size: var(--faceplate-tag-font-size);
+    line-height: var(--faceplate-tag-line-height);
+}
+
+/* Formatting options */
+.faceplate-tag-formatting-none {
+    text-transform: none;
+}
+
+.faceplate-tag-formatting-uppercased {
+    text-transform: uppercase;
+}
+
+.faceplate-tag-formatting-lowercased {
+    text-transform: lowercase;
+}
+
+.faceplate-tag-formatting-capitalized {
+    text-transform: capitalize;
+}
+
+/* Style options */
+.faceplate-tag-style-text {
+    /* Simple text style - inherit colors */
+    color: inherit;
+}
+
+.faceplate-tag-style-boxed {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--faceplate-tag-background-color);
+    border: 1px solid var(--faceplate-tag-border-color);
+    color: var(--faceplate-tag-text-color);
+}

@@ -3,7 +3,7 @@ import { FormFieldLayout } from './FormFieldLayout';
 import { Placeholder } from '../Placeholder';
 
 export default {
-  title: 'components/FormFieldLayout',
+  title: 'Forms/FormFieldLayout',
   component: FormFieldLayout,
 } as Meta<typeof FormFieldLayout>;
 

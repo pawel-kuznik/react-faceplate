@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { BarChart } from './BarChart';
 
 export default {
-  title: 'components/BarChart',
+  title: 'Data/BarChart',
   component: BarChart,
 } as Meta<typeof BarChart>;
 

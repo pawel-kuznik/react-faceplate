@@ -1,0 +1,21 @@
+/* TagInput Component Styles */
+
+.faceplate-taginput {
+    display: block;
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--faceplate-color-border-default);
+    border-radius: 0.25rem;
+    background-color: var(--faceplate-color-background-default);
+}
+
+.faceplate-taginput:focus-within {
+    border-color: var(--faceplate-color-border-focus);
+    box-shadow: 0 0 0 2px var(--faceplate-color-border-focus-shadow);
+}
+
+.faceplate-taginput-placeholder {
+    color: var(--faceplate-color-text-muted);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}

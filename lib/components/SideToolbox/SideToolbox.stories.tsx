@@ -3,7 +3,7 @@ import { SideToolbox } from './SideToolbox';
 import { Button } from '../Button';
 
 export default {
-  title: 'components/SideToolbox',
+  title: 'Layouts/SideToolbox',
   component: SideToolbox,
 } as Meta<typeof SideToolbox>;
 

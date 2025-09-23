@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { FormField } from './FormField';
 
 export default {
-    title: 'components/FormField',
+    title: 'Forms/FormField',
     component: FormField,
 } as Meta<typeof FormField>;
 

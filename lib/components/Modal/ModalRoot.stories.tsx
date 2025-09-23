@@ -5,7 +5,7 @@ import { useModalControls } from './useModalControls';
 import { DialogFrame } from '../DialogFrame';
 
 export default {
-  title: 'components/ModalRoot',
+  title: 'Layouts/ModalRoot',
   component: ModalRoot,
 } as Meta<typeof ModalRoot>;
 

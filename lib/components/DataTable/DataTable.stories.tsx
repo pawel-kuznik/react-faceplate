@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { DataTable } from './DataTable';
 
 export default {
-  title: 'components/DataTable',
+  title: 'Data/DataTable',
   component: DataTable,
 } as Meta<typeof DataTable>;
 

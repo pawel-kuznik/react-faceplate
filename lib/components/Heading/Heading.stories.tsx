@@ -3,7 +3,7 @@ import { Heading, H1, H2, H3, H4, H5, H6 } from './Heading';
 
 // Main Heading component stories
 const HeadingMeta: Meta<typeof Heading> = {
-  title: 'components/Heading',
+  title: 'Typography/Heading',
   component: Heading,
   parameters: {
     layout: 'padded',

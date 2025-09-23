@@ -4,7 +4,7 @@ import { DataTable } from '../DataTable';
 import { ReactNode } from 'react';
 
 export default {
-  title: 'components/DialogFrame',
+  title: 'Layouts/DialogFrame',
   component: DialogFrame,
 } as Meta<typeof DialogFrame>;
 

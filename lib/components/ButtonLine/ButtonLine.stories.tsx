@@ -3,7 +3,7 @@ import { ButtonLine } from "./ButtonLine";
 import { Button } from '../Button';
 
 export default {
-    title: 'components/ButtonLine',
+    title: 'Buttons/ButtonLine',
     component: ButtonLine,
 } as Meta<typeof ButtonLine>;
 

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { StatsList } from './StatsList';
 
 export default {
-    title: 'components/StatsList',
+    title: 'Data/StatsList',
     component: StatsList,
 } as Meta<typeof StatsList>;
 

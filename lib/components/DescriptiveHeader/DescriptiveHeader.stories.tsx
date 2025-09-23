@@ -4,7 +4,7 @@ import { Button } from '../Button/Button';
 import { ButtonLine } from '../ButtonLine/ButtonLine';
 
 const meta: Meta<typeof DescriptiveHeader> = {
-  title: 'components/DescriptiveHeader',
+  title: 'Layouts/DescriptiveHeader',
   component: DescriptiveHeader,
   parameters: {
     layout: 'padded',

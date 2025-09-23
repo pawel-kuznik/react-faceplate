@@ -12,7 +12,7 @@ import { Grid } from '../Grid';
 import { Tabs } from '../Tabs';
 
 export default {
-  title: 'components/ScreenBox',
+  title: 'Layouts/ScreenBox',
   component: ScreenBox,
 } as Meta<typeof ScreenBox>;
 

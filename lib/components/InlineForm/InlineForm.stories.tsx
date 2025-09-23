@@ -4,7 +4,7 @@ import { Input } from '../Input';
 import { Button } from '../Button';
 
 export default {
-  title: 'components/InlineForm',
+  title: 'Forms/InlineForm',
   component: InlineForm,
 } as Meta<typeof InlineForm>;
 

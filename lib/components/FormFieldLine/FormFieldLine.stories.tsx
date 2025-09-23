@@ -3,7 +3,7 @@ import { FormFieldLine } from "./FormFieldLine";
 import { Input } from "../Input";
 
 export default {
-    title: 'components/FormFieldLine',
+    title: 'Forms/FormFieldLine',
     component: FormFieldLine,
 } as Meta<typeof FormFieldLine>;
 
