@@ -8,6 +8,7 @@ export * from "./components/ContentBox";
 export * from "./components/DataTable";
 export * from "./components/DescriptiveHeader";
 export * from "./components/DialogFrame";
+export * from "./components/PanelFrame";
 export * from "./components/EditableHeading";
 export * from "./components/FormField";
 export * from "./components/FormFieldGroup";

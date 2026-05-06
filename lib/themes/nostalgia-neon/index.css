@@ -13,6 +13,7 @@
 @import "./components/DataTable.css";
 @import "./components/DescriptiveHeader.css";
 @import "./components/DialogFrame.css";
+@import "./components/PanelFrame.css";
 @import "./components/EditableHeading.css";
 @import "./components/FormFieldGroup.css";
 @import "./components/FormFieldLayout.css";

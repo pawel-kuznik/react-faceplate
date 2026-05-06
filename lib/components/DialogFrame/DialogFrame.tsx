@@ -37,7 +37,7 @@ export interface DialogFrameProps {
     /**
      *  The title of the dialog. In general it should be a string, but it's
      *  possible to pass a react node. Such react node should contain inline
-     *  elements and behave like regular text.
+     *  elements and behave like a regular text.
      */
     title: string | ReactNode;
 
