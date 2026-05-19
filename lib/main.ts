@@ -40,3 +40,4 @@ export * from "./components/TextArea";
 export * from "./components/TreeChart";
 
 export * from "./utils/extractFormData";
+export * from "./utils/useDraggable";
