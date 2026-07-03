@@ -1,0 +1,55 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A classic clickable button for triggering actions. Supports labels, icons, color variants, and two sizes.
+
+## Default
+
+The default button uses the theme's neutral color. Pair it with `onClick` to handle user interaction.
+
+<Canvas of={ButtonStories.DefaultNormal} />
+
+## Colors
+
+Use the `color` prop to communicate intent. Available values: `default`, `red`, `orange`, `yellow`, `lime`, `green`, `blue`, `navy`, `white`, `gray`, `black`.
+
+<Canvas of={ButtonStories.RedNormal} />
+<Canvas of={ButtonStories.GreenNormal} />
+<Canvas of={ButtonStories.BlueNormal} />
+
+## Block
+
+Set `block` to `true` to stretch the button across the full width of its container.
+
+<Canvas of={ButtonStories.DefaultBlock} />
+
+## Sizes
+
+The `size` prop controls button dimensions.
+
+- `normal` — default, suited for forms and primary actions.
+- `mini` — compact, suited for inline controls such as close or action buttons next to content.
+
+<Canvas of={ButtonStories.MiniWithIcon} />
+
+## With icon
+
+Pass any React node as `icon`. The icon is rendered to the left of the label. Use a 24×24 px element for `normal` size and 16×16 px for `mini`.
+
+<Canvas of={ButtonStories.NormalWithIcon} />
+
+## Form submission
+
+By default `submit` is `true`, meaning the button acts as a `type="submit"` element and will submit any parent form. Set `submit={false}` when the button should not trigger form submission.
+
+```tsx
+<Button label="Cancel" submit={false} onClick={() => handleCancel()} />
+```
+
+## Props
+
+<ArgTypes of={ButtonStories} />

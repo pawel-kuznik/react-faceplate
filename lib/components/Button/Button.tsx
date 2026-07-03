@@ -16,12 +16,6 @@ export interface ButtonProps {
     icon?: ReactNode;
 
     /**
-     *  The style of the button.
-     *  @deprecated
-     */
-    style?: "default" | PaletteColor;
-
-    /**
      *  The color of the button.
      */
     color?: "default" | PaletteColor;
@@ -59,7 +53,6 @@ export function Button({
     icon,
     block = false,
     color,
-    style = "default",
     size = "normal", 
     onClick,
     submit = true 
@@ -71,7 +64,7 @@ export function Button({
 
     const css = [
         "faceplate-button",
-        (color === undefined && style !== undefined) ? `faceplate-button-color-${style}` : `faceplate-button-color-${color || 'default'}`,
+        `faceplate-button-color-${color || 'default'}`,
         `faceplate-button-size-${size}`
     ];
 

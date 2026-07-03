@@ -5,6 +5,7 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "files": [
+    "skills",
     "dist",
     "lib/themes"
   ],
