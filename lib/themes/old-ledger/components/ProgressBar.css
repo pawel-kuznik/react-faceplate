@@ -1,0 +1,59 @@
+.faceplate-progressbar
+{
+    box-sizing: border-box;
+    position: relative;
+
+    height: 1.4em;
+    padding: 2px;
+
+    display: grid;
+    align-items: center;
+
+    background: var(--faceplate-color-paper-shade);
+    border: var(--faceplate-border);
+}
+
+.faceplate-progressbar-bar
+{
+    height: 100%;
+    background: var(--faceplate-progressbar-accent, var(--faceplate-border-color));
+
+    transition: width .2s ease;
+}
+
+.faceplate-progressbar-content
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    box-sizing: border-box;
+    padding: 0 0.6em;
+
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.faceplate-progressbar-content:empty
+{
+    padding: 0;
+}
+
+/**
+ *  Colors
+ */
+.faceplate-progressbar.faceplate-progressbar-color-red      { --faceplate-progressbar-accent: var(--faceplate-color-red); }
+.faceplate-progressbar.faceplate-progressbar-color-orange   { --faceplate-progressbar-accent: var(--faceplate-color-orange); }
+.faceplate-progressbar.faceplate-progressbar-color-white    { --faceplate-progressbar-accent: var(--faceplate-color-white); }
+.faceplate-progressbar.faceplate-progressbar-color-yellow   { --faceplate-progressbar-accent: var(--faceplate-color-yellow); }
+.faceplate-progressbar.faceplate-progressbar-color-lime     { --faceplate-progressbar-accent: var(--faceplate-color-lime); }
+.faceplate-progressbar.faceplate-progressbar-color-green    { --faceplate-progressbar-accent: var(--faceplate-color-green); }
+.faceplate-progressbar.faceplate-progressbar-color-blue     { --faceplate-progressbar-accent: var(--faceplate-color-blue); }
+.faceplate-progressbar.faceplate-progressbar-color-navy     { --faceplate-progressbar-accent: var(--faceplate-color-navy); }
+.faceplate-progressbar.faceplate-progressbar-color-black    { --faceplate-progressbar-accent: var(--faceplate-color-black); }
+.faceplate-progressbar.faceplate-progressbar-color-gray     { --faceplate-progressbar-accent: var(--faceplate-color-gray); }

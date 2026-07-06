@@ -1,0 +1,17 @@
+:root
+{
+    /**
+     *  In general the border matches the ink color.
+     */
+    --faceplate-border-color: var(--faceplate-color-ink);
+
+    /**
+     *  The general hairline rule that should be used in most of the cases.
+     */
+    --faceplate-border: 1px solid var(--faceplate-border-color);
+
+    /**
+     *  The heavier rule used to carve out a layout box.
+     */
+    --faceplate-layout-border: 2px solid var(--faceplate-border-color);
+}

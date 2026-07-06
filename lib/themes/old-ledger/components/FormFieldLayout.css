@@ -1,0 +1,33 @@
+.faceplate-formfieldlayout.faceplate-formfieldlayout-layout-column
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 4px;
+
+    margin-top: var(--faceplate-control-spacing);
+    margin-bottom: var(--faceplate-control-spacing);
+}
+
+.faceplate-formfieldlayout.faceplate-formfieldlayout-layout-inline
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: calc(2 * var(--faceplate-control-spacing));
+}
+
+.faceplate-formfieldlayout > label
+{
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faceplate-color-ink-muted);
+}
+
+.faceplate-formfieldlayout > .faceplate-formfieldlayout-description
+{
+    font-size: 0.75em;
+    font-style: italic;
+    color: var(--faceplate-color-ink-muted);
+}

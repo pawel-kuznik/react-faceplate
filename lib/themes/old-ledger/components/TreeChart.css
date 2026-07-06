@@ -1,0 +1,17 @@
+.faceplate-treechart {
+    font-family: var(--faceplate-font-family);
+}
+
+.faceplate-treechart-node text {
+    fill: var(--faceplate-color-ink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.faceplate-treechart-branch line,
+.faceplate-treechart-list line {
+    stroke: var(--faceplate-color-ink-muted);
+    stroke-width: 1;
+}

@@ -1,0 +1,47 @@
+.faceplate-tag {
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faceplate-controls-font-color);
+}
+
+.faceplate-tag-style-boxed {
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    gap: 4px;
+    padding: 2px 8px;
+    background: var(--faceplate-color-shade-default);
+}
+
+.faceplate-tag-style-text {
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--faceplate-border-color);
+}
+
+.faceplate-tag-remove {
+    /* @todo this size should correspond with the button mini size */
+    height: 24px;
+    width: 24px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    background: black;
+    border: none;
+    font-size: 1.5em;
+    line-height: 1;
+    color: white;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.faceplate-tag-style-boxed .faceplate-tag-remove {
+    margin-top: -2px;
+    margin-bottom: -2px;
+    margin-right: -8px;
+    margin-left: 8px;
+}
+
+.faceplate-tag-remove:hover {
+    background: var(--faceplate-color-red);
+}

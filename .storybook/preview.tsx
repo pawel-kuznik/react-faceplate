@@ -1,8 +1,10 @@
 import type { Preview } from "@storybook/react";
 import nostalgiaNeoncss from '../lib/themes/nostalgia-neon/index.css?inline';
+import oldLedgercss from '../lib/themes/old-ledger/index.css?inline';
 
 const themes: Record<string, string> = {
     'nostalgia-neon': nostalgiaNeoncss,
+    'old-ledger': oldLedgercss
 };
 
 export const globalTypes = {

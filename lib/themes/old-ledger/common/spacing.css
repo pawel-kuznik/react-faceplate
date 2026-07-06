@@ -1,0 +1,9 @@
+:root
+{
+    /*
+     *  A general spacing to be used between layout elements.
+     */
+    --faceplate-layout-spacing: 4px;
+
+    --faceplate-control-spacing: var(--faceplate-layout-spacing);
+}

@@ -1,0 +1,15 @@
+:root
+{
+    --faceplate-font-family: 'Helvetica Neue', Arial, 'Segoe UI', sans-serif;
+
+    --faceplate-controls-line-height: 16px;
+    --faceplate-controls-font-color: var(--faceplate-color-ink);
+    --faceplate-controls-font-bg: var(--faceplate-color-paper);
+}
+
+body
+{
+    font-family: var(--faceplate-font-family);
+    color: var(--faceplate-color-ink);
+    background: var(--faceplate-color-paper);
+}

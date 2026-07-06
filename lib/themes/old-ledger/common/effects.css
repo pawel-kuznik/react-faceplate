@@ -1,0 +1,12 @@
+:root
+{
+    /* a faint diagonal hatch, borrowed from the terrain-key shading found on old
+       hex-map ledgers; used sparingly on hover/press states instead of shadows */
+    --faceplate-hatch: repeating-linear-gradient(
+        45deg,
+        rgba(36, 31, 26, 0.08) 0px,
+        rgba(36, 31, 26, 0.08) 1px,
+        transparent 1px,
+        transparent 6px
+    );
+}

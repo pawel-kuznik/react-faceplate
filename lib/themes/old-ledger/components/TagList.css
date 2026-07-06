@@ -1,0 +1,16 @@
+.faceplate-taglist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(2 * var(--faceplate-control-spacing));
+}
+
+.faceplate-taglist-item {
+    display: flex;
+    align-items: center;
+}
+
+.faceplate-taglist-picker {
+    display: flex;
+    align-items: center;
+}

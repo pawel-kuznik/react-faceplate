@@ -1,0 +1,106 @@
+.faceplate-button.faceplate-button-size-normal,
+.faceplate-button.faceplate-button-size-mini
+{
+    box-sizing: border-box;
+    font-family: var(--faceplate-font-family);
+    appearance: none;
+    border-radius: 0;
+}
+
+.faceplate-button.faceplate-button-size-normal {
+    margin: 0;
+
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    height: calc(var(--faceplate-controls-line-height) + 2 * var(--faceplate-control-spacing));
+    padding: var(--faceplate-control-spacing) calc(2 * var(--faceplate-control-spacing));
+
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    color: white;
+    background-color: var(--faceplate-button-accent);
+    background-image: none;
+    border: none;
+
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.faceplate-button.faceplate-button-size-normal:has(.faceplate-button-icon) {
+    grid-template-columns: min-content auto 1fr;
+}
+
+.faceplate-button.faceplate-button-size-normal .faceplate-button-icon {
+    display: inline-flex;
+    margin-right: var(--faceplate-control-spacing);
+}
+
+.faceplate-button.faceplate-button-size-normal:hover {
+    background-image: var(--faceplate-hatch);
+}
+
+.faceplate-button.faceplate-button-size-normal:active {
+    background-color: var(--faceplate-button-accent, var(--faceplate-border-color));
+    background-image: none;
+    color: var(--faceplate-color-paper);
+}
+
+.faceplate-button.faceplate-button-size-normal.faceplate-button-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--faceplate-control-spacing);
+    width: 100%;
+    text-align: center;
+}
+
+.faceplate-button.faceplate-button-size-mini {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+
+    background-color: var(--faceplate-controls-font-bg);
+    background-image: none;
+    border: var(--faceplate-border);
+    color: var(--faceplate-button-accent, var(--faceplate-controls-font-color));
+
+    cursor: pointer;
+    transition: background-color .15s ease;
+}
+
+.faceplate-button.faceplate-button-size-mini:hover {
+    background-image: var(--faceplate-hatch);
+}
+
+.faceplate-button.faceplate-button-size-mini.faceplate-button-block {
+    display: flex;
+    width: 100%;
+}
+
+.faceplate-button:focus-visible {
+    outline: 1px dashed var(--faceplate-color-ink);
+    outline-offset: 2px;
+}
+
+/**
+ *  The colors
+ */
+.faceplate-button.faceplate-button-color-red { --faceplate-button-accent: var(--faceplate-color-red); }
+.faceplate-button.faceplate-button-color-orange { --faceplate-button-accent: var(--faceplate-color-orange); }
+.faceplate-button.faceplate-button-color-white { --faceplate-button-accent: var(--faceplate-color-white); }
+.faceplate-button.faceplate-button-color-yellow { --faceplate-button-accent: var(--faceplate-color-yellow); }
+.faceplate-button.faceplate-button-color-lime { --faceplate-button-accent: var(--faceplate-color-lime); }
+.faceplate-button.faceplate-button-color-green { --faceplate-button-accent: var(--faceplate-color-green); }
+.faceplate-button.faceplate-button-color-blue { --faceplate-button-accent: var(--faceplate-color-blue); }
+.faceplate-button.faceplate-button-color-navy { --faceplate-button-accent: var(--faceplate-color-navy); }
+.faceplate-button.faceplate-button-color-black { --faceplate-button-accent: var(--faceplate-color-black); }
+.faceplate-button.faceplate-button-color-gray { --faceplate-button-accent: var(--faceplate-color-gray); }
